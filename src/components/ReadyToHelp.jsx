@@ -29,12 +29,14 @@ const ReadyToHelp = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
 
           {/* Connecting Line (Desktop Only) */}
-          <div className="hidden md:block absolute top-[45px] left-[16%] right-[16%] h-[2px] border-t-2 border-dotted border-[#be127e] z-0"></div>
+          {/* Connecting Lines (Desktop Only) */}
+          <div className="hidden md:block absolute top-[45px] left-[26%] w-[15%] h-[2px] border-t-2 border-dotted border-[#be127e] z-0"></div>
+          <div className="hidden md:block absolute top-[45px] right-[26%] w-[15%] h-[2px] border-t-2 border-dotted border-[#be127e] z-0"></div>
 
           {/* Item 1: Emergency Help */}
           <div className="flex flex-col items-center text-center relative z-10 group">
-            <div className="w-[90px] h-[90px] bg-white border border-gray-100 shadow-md rounded-full flex items-center justify-center mb-6 transition-transform duration-300 group-hover:-translate-y-2">
-              <FaAmbulance className="text-3xl text-[#be127e]" />
+            <div className="w-[90px] h-[90px] bg-white border border-gray-100 shadow-md rounded-full flex items-center justify-center mb-6 transition-all duration-300 group-hover:-translate-y-2 hover:bg-[#be127e] group/icon">
+              <FaAmbulance className="text-3xl text-[#be127e] group-hover/icon:text-white transition-colors duration-300" />
             </div>
             <h3 className="text-xl font-bold text-[#003b46] mb-3">Emergency Help</h3>
             <p className="text-gray-500 text-sm leading-relaxed px-4">
@@ -44,8 +46,8 @@ const ReadyToHelp = () => {
 
           {/* Item 2: Modern Laboratory */}
           <div className="flex flex-col items-center text-center relative z-10 group">
-            <div className="w-[90px] h-[90px] bg-white border border-gray-100 shadow-md rounded-full flex items-center justify-center mb-6 transition-transform duration-300 group-hover:-translate-y-2">
-              <FaClinicMedical className="text-3xl text-[#be127e]" />
+            <div className="w-[90px] h-[90px] bg-white border border-gray-100 shadow-md rounded-full flex items-center justify-center mb-6 transition-all duration-300 group-hover:-translate-y-2 hover:bg-[#be127e] group/icon">
+              <FaClinicMedical className="text-3xl text-[#be127e] group-hover/icon:text-white transition-colors duration-300" />
             </div>
             <h3 className="text-xl font-bold text-[#003b46] mb-3">Modern Laboratory</h3>
             <p className="text-gray-500 text-sm leading-relaxed px-4">
@@ -55,8 +57,8 @@ const ReadyToHelp = () => {
 
           {/* Item 3: Accurate Reports */}
           <div className="flex flex-col items-center text-center relative z-10 group">
-            <div className="w-[90px] h-[90px] bg-white border border-gray-100 shadow-md rounded-full flex items-center justify-center mb-6 transition-transform duration-300 group-hover:-translate-y-2">
-              <FaStethoscope className="text-3xl text-[#be127e]" />
+            <div className="w-[90px] h-[90px] bg-white border border-gray-100 shadow-md rounded-full flex items-center justify-center mb-6 transition-all duration-300 group-hover:-translate-y-2 hover:bg-[#be127e] group/icon">
+              <FaStethoscope className="text-3xl text-[#be127e] group-hover/icon:text-white transition-colors duration-300" />
             </div>
             <h3 className="text-xl font-bold text-[#003b46] mb-3">Accurate Reports</h3>
             <p className="text-gray-500 text-sm leading-relaxed px-4">
