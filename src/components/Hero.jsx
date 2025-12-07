@@ -88,7 +88,7 @@ const Hero = () => {
 
                 <div className={`w-full md:w-[45%] -mt-20`}>
 
-                  <h1 className={`text-[38px] font-bold text-[#003b46] leading-tight transition-all duration-1000 ease-out delay-0 transform ${isActive ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
+                  <h1 className={`text-3xl md:text-[38px] font-bold text-[#003b46] leading-tight transition-all duration-1000 ease-out delay-0 transform ${isActive ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
                     }`}>
                     {slide.title}
                   </h1>
