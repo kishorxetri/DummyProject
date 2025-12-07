@@ -36,7 +36,7 @@ const Stats = () => {
           {statsData.map((stat) => (
             <div key={stat.id} className="flex items-center gap-4 text-white group cursor-default">
               {/* Icon Circle */}
-              <div className="w-16 h-16 rounded-full border-2 border-white/30 flex items-center justify-center text-2xl transition-transform duration-300 group-hover:scale-110 bg-white/10">
+              <div className="w-16 h-16 rounded-full border-2 border-white/30 flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 bg-white/10 hover:bg-white hover:text-[#28a745] hover:border-white">
                 {stat.icon}
               </div>
 
