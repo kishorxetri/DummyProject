@@ -100,8 +100,12 @@ const Hero = () => {
 
                   <div className={`flex flex-wrap gap-4 mt-8 transition-all duration-1000 ease-out delay-500 transform ${isActive ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                     }`}>
-                    <button className="bg-[#be127e] hover:bg-[#9d0f68] text-white px-8 py-3 rounded-md font-bold uppercase text-sm tracking-wider transition shadow-lg">
-                      Get Appointment
+                    <button className="relative bg-black text-white px-8 py-3 rounded-md font-bold uppercase text-sm tracking-wider shadow-lg overflow-hidden group">
+                      <span className="absolute inset-0 w-full h-full flex">
+                        <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover:-translate-x-full"></span>
+                        <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover:translate-x-full"></span>
+                      </span>
+                      <span className="relative z-10">Get Appointment</span>
                     </button>
                     <button className="bg-[#003b46] hover:bg-[#002830] text-white px-8 py-3 rounded-md font-bold uppercase text-sm tracking-wider transition shadow-lg">
                       Learn More
