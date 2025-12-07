@@ -2,7 +2,8 @@
 //import './App.css'
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
-import ReadyToHelp from "./components/ReadyToHelp.jsx"; // Added this line
+import ReadyToHelp from "./components/ReadyToHelp.jsx";
+import Stats from "./components/Stats.jsx";
 function App() {
   //const [count, setCount] = useState(0)
 
@@ -10,7 +11,8 @@ function App() {
     <>
       <Header />
       <Hero />
-      <ReadyToHelp /> {/* Added this line */}
+      <ReadyToHelp />
+      <Stats />
     </>
   )
 }
