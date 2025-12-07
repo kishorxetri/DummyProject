@@ -120,8 +120,12 @@ const Header = () => {
         </ul>
 
         {/* Button */}
-        <button className="bg-[#be127e] hover:bg-[#9d0f68] text-white px-6 py-2.5 rounded-md font-semibold shadow-md transition transform hover:scale-105">
-          Book Appointment
+        <button className="relative bg-black text-white px-6 py-2.5 rounded-md font-semibold shadow-md overflow-hidden group">
+          <span className="absolute inset-0 w-full h-full flex">
+            <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover:-translate-x-full"></span>
+            <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover:translate-x-full"></span>
+          </span>
+          <span className="relative z-10">Book Appointment</span>
         </button>
       </div>
     </>
