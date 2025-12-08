@@ -65,27 +65,27 @@ const KeyServices = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
           {services.map((service) => {
             const IconComponent = service.icon;
             return (
               <div
                 key={service.id}
-                className="flex gap-4 group"
+                className="flex gap-5 group"
               >
                 {/* Icon */}
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-[#be127e]/10 rounded-lg flex items-center justify-center group-hover:bg-[#be127e] transition-colors duration-300">
-                    <IconComponent className="text-3xl text-[#be127e] group-hover:text-white transition-colors duration-300" />
+                  <div className="w-14 h-14 bg-[#be127e]/10 rounded-lg flex items-center justify-center group-hover:bg-[#be127e] transition-colors duration-300">
+                    <IconComponent className="text-2xl text-[#be127e] group-hover:text-white transition-colors duration-300" />
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="flex-1">
-                  <h3 className="text-lg font-bold text-[#003b46] mb-2">
+                  <h3 className="text-[20px] font-bold text-[#003b46] mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-gray-600 text-[15px] leading-relaxed">
                     {service.description}
                   </p>
                 </div>

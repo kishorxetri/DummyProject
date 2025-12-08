@@ -1,22 +1,27 @@
-//import { useState } from 'react'
-//import './App.css'
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
 import WhoWeAre from './components/WhoWeAre.jsx';
+import CTASection from './components/CTASection.jsx';
 import ReadyToHelp from "./components/ReadyToHelp.jsx";
 import Stats from "./components/Stats.jsx";
 import Services from "./components/Services.jsx";
-function App() {
-  //const [count, setCount] = useState(0)
+import HygieneSection from "./components/HygieneSection.jsx";
+import FacilitiesGallery from "./components/FacilitiesGallery.jsx";
+import KeyServices from "./components/KeyServices.jsx";
 
+function App() {
   return (
     <>
       <Header />
-      <Hero />     
+      <Hero />
       <ReadyToHelp />
       <Stats />
       <Services />
-       <WhoWeAre />
+      <WhoWeAre />
+      <CTASection />
+      <HygieneSection />
+      <FacilitiesGallery />
+      <KeyServices />
     </>
   )
 }

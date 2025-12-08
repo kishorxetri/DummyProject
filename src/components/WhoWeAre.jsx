@@ -19,7 +19,7 @@ const WhoWeAre = () => {
   const thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
   return (
-    <section className="pt-4 pb-16 md:pt-8 md:pb-20 bg-white overflow-hidden">
+    <section className="py-12 md:py-16 bg-white overflow-hidden">
       <div className="container mx-auto px-4 md:px-[150px]">
         <div className="flex flex-col md:flex-row gap-12 items-center">
 

@@ -3,7 +3,7 @@ import { FaHeartbeat } from "react-icons/fa";
 
 const Services = () => {
   return (
-    <div className="py-10 bg-white font-['Poppins']">
+    <div className="py-12 md:py-16 bg-white font-['Poppins']">
       <div className="container mx-auto px-4 md:px-[150px] text-center">
 
         {/* Heading */}
