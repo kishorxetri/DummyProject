@@ -1,12 +1,25 @@
 import React, { useState } from "react";
-import { FaPlay, FaCheckCircle, FaChevronRight } from "react-icons/fa";
+import { FaPlay, FaChevronRight } from "react-icons/fa";
 
 const WhoWeAre = () => {
-  // This state could be used to toggle a video modal in the future
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  // State to toggle between thumbnail and video player
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+  const features = [
+    "Modern diagnostic equipment",
+    "Skilled and experienced staff",
+    "Quick and accurate reports",
+    "Friendly and professional care",
+    "Affordable service packages",
+    "Convenient location in Tikathali"
+  ];
+
+  // Video Configuration
+  const videoId = "ApMw4pjuA0o"; // Extracted from user's link
+  const thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
   return (
-    <section className="py-16 md:py-24 bg-white overflow-hidden">
+    <section className="pt-4 pb-16 md:pt-8 md:pb-20 bg-white overflow-hidden">
       <div className="container mx-auto px-4 md:px-[150px]">
         <div className="flex flex-col md:flex-row gap-12 items-center">
 
@@ -25,44 +38,58 @@ const WhoWeAre = () => {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
-              <FeatureItem text="Modern diagnostic equipment" />
-              <FeatureItem text="Skilled and experienced staff" />
-              <FeatureItem text="Quick and accurate reports" />
-              <FeatureItem text="Friendly and professional care" />
-              <FeatureItem text="Affordable service packages" />
-              <FeatureItem text="Convenient location in Tikathali" />
+              {features.map((feature, index) => (
+                <FeatureItem key={index} text={feature} />
+              ))}
             </div>
           </div>
 
-          {/* Right Column: Video/Image Section */}
+          {/* Right Column: Video Section */}
           <div className="w-full md:w-1/2 relative group">
-            {/* Image Container */}
-            <div className="relative rounded-lg overflow-hidden shadow-xl">
-              <img
-                src="https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/slider3.jpg" // Placeholder using one of their existing images for consistency
-                alt="Bhagawati Diagnostic Center Building"
-                className="w-full h-[350px] md:h-[400px] object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+            <div className="relative rounded-lg overflow-hidden shadow-xl w-full h-[350px] md:h-[400px]">
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
+              {!isVideoPlaying ? (
+                /* --- 1. Thumbnail State (Default) --- */
+                <>
+                  <img
+                    src={thumbnail}
+                    alt="Bhagawati Diagnostic Center Video"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
 
-              {/* Pulse Animation Play Button */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <button
-                  onClick={() => console.log('Open Video')} // Placeholder action
-                  className="relative flex items-center justify-center w-20 h-20 bg-[#8e0c60] rounded-full shadow-lg text-white z-20 hover:scale-110 transition-transform duration-300"
-                >
-                  <FaPlay className="text-2xl ml-1" /> {/* ml-1 to center the play triangle visually */}
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
 
-                  {/* Pulse Circles */}
-                  <span className="absolute inline-flex h-full w-full rounded-full bg-[#be127e] opacity-75 animate-[ping_2s_ease-in-out_infinite] z-10"></span>
-                  <span className="absolute inline-flex h-full w-full rounded-full bg-[#8e0c60] opacity-40 animate-[ping_3s_ease-in-out_infinite_0.5s] z-0"></span>
-                </button>
-              </div>
+                  {/* Pulse Animation Play Button */}
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <button
+                      onClick={() => setIsVideoPlaying(true)}
+                      className="relative flex items-center justify-center w-20 h-20 bg-[#8e0c60] rounded-full shadow-lg text-white z-20 hover:scale-110 transition-transform duration-300 cursor-pointer"
+                      aria-label="Play Video"
+                    >
+                      <FaPlay className="text-2xl ml-1" />
+
+                      {/* Pulse Circles */}
+                      <span className="absolute inline-flex h-full w-full rounded-full bg-[#be127e] opacity-75 animate-[ping_2s_ease-in-out_infinite] z-10"></span>
+                      <span className="absolute inline-flex h-full w-full rounded-full bg-[#8e0c60] opacity-40 animate-[ping_3s_ease-in-out_infinite_0.5s] z-0"></span>
+                    </button>
+                  </div>
+                </>
+              ) : (
+                /* --- 2. Video Player State (Active) --- */
+                <iframe
+                  className="w-full h-full"
+                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
+                  title="Bhagawati Diagnostic Center Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              )}
+
             </div>
 
-            {/* Decorative background element (optional, to match "design" feel) */}
+            {/* Decorative background element */}
             <div className="absolute -z-10 bottom-[-20px] right-[-20px] w-full h-full border-2 border-[#be127e]/10 rounded-lg hidden md:block"></div>
           </div>
         </div>
@@ -71,7 +98,7 @@ const WhoWeAre = () => {
   );
 };
 
-// Start Helper Component
+// Feature Item Helper
 const FeatureItem = ({ text }) => (
   <div className="flex items-center gap-3 group">
     <div className="w-6 h-6 rounded-full bg-[#be127e] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
