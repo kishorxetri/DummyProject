@@ -3,11 +3,11 @@ import { FaHeartbeat } from "react-icons/fa";
 
 const Services = () => {
   return (
-    <div className="py-16 bg-white font-['Poppins']">
+    <div className="py-10 bg-white font-['Poppins']">
       <div className="container mx-auto px-4 md:px-[150px] text-center">
 
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-[#003b46] mb-4">
+        <h2 className="text-[28px] font-bold text-[#003b46] mb-4">
           We Offer Comprehensive Diagnostic <br className="hidden md:block" /> Services To Improve Your Health
         </h2>
 

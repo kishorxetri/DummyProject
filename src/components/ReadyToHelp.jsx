@@ -3,12 +3,12 @@ import { FaAmbulance, FaStethoscope, FaHeartbeat, FaClinicMedical } from "react-
 
 const ReadyToHelp = () => {
   return (
-    <div className="py-16 bg-white font-['Poppins']">
+    <div className="py-8 bg-white font-['Poppins']">
       <div className="container mx-auto px-4 md:px-[150px]">
 
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#003b46] mb-4">
+          <h2 className="text-[28px] font-bold text-[#003b46] mb-4">
             We Are Always Ready To Help You & Your <br /> Family
           </h2>
 
