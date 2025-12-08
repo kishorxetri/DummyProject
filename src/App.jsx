@@ -2,17 +2,21 @@
 //import './App.css'
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
+import WhoWeAre from './components/WhoWeAre.jsx';
 import ReadyToHelp from "./components/ReadyToHelp.jsx";
 import Stats from "./components/Stats.jsx";
+import Services from "./components/Services.jsx";
 function App() {
   //const [count, setCount] = useState(0)
 
   return (
     <>
       <Header />
-      <Hero />
+      <Hero />     
       <ReadyToHelp />
       <Stats />
+      <Services />
+       <WhoWeAre />
     </>
   )
 }
