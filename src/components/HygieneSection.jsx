@@ -2,7 +2,7 @@ import React from "react";
 import { FaHeartbeat } from "react-icons/fa";
 
 const HygieneSection = () => {
-  return (<div className="py-10 bg-white font-['Poppins']">
+  return (<div className="pt-[50px] pb-[50px] bg-white font-['Poppins']">
     <div className="container mx-auto px-4 md:px-[150px] text-center">
 
       {/* Heading */}

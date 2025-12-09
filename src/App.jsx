@@ -8,6 +8,7 @@ import Services from "./components/Services.jsx";
 import HygieneSection from "./components/HygieneSection.jsx";
 import FacilitiesGallery from "./components/FacilitiesGallery.jsx";
 import KeyServices from "./components/KeyServices.jsx";
+import Packages from "./components/Packages.jsx";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <HygieneSection />
       <FacilitiesGallery />
       <KeyServices />
+      <Packages />
     </>
   )
 }

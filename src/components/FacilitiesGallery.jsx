@@ -47,8 +47,8 @@ const FacilitiesGallery = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50 font-['Poppins'] overflow-hidden">
-      <div className="container mx-auto px-4 md:px-[150px]">
+    <section className="pt-[15px] pb-0 bg-gray-50 font-['Poppins'] overflow-hidden">
+      <div className="container mx-auto px-4 md:px-[50px]">
 
         {/* Carousel Container */}
         <div className="relative">
@@ -56,7 +56,8 @@ const FacilitiesGallery = () => {
             {getVisibleItems().map((facility, idx) => (
               <div
                 key={`${facility.id}-${currentIndex}-${idx}`}
-                className="relative w-full h-[220px] rounded-lg overflow-hidden group cursor-pointer shadow-lg animate-fadeIn"
+                className="relative overflow-hidden group cursor-pointer shadow-lg animate-slideIn"
+                style={{ width: '350px', height: '280px', borderRadius: '0px' }}
               >
                 {/* Image */}
                 <img
@@ -67,7 +68,7 @@ const FacilitiesGallery = () => {
 
                 {/* Pink Overlay on Hover */}
                 <div className="absolute inset-0 bg-[#be127e] opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
-                  <button className="bg-white text-[#be127e] px-6 py-3 rounded font-bold text-sm flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-lg hover:bg-gray-100">
+                  <button className="bg-white text-[#be127e] font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-lg hover:bg-gray-100" style={{ fontSize: '16px', padding: '0px 25px', borderRadius: '3px', minWidth: '180px' }}>
                     <FaEye />
                     {facility.label}
                   </button>
@@ -79,18 +80,16 @@ const FacilitiesGallery = () => {
       </div>
 
       <style jsx>{`
-                @keyframes fadeIn {
+                @keyframes slideIn {
                     from {
-                        opacity: 0;
-                        transform: translateX(20px);
+                        transform: translateX(-100%);
                     }
                     to {
-                        opacity: 1;
                         transform: translateX(0);
                     }
                 }
-                .animate-fadeIn {
-                    animation: fadeIn 0.5s ease-out;
+                .animate-slideIn {
+                    animation: slideIn 0.6s ease-out;
                 }
             `}</style>
     </section>

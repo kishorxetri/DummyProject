@@ -42,12 +42,12 @@ const KeyServices = () => {
   ];
 
   return (
-    <section className="py-12 bg-white font-['Poppins']">
+    <section className="pt-[50px] pb-[15px] bg-white font-['Poppins']">
       <div className="container mx-auto px-4 md:px-[150px]">
 
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-[28px] md:text-[38px] font-bold text-[#003b46] mb-4">
+          <h2 className="text-[32px] font-bold text-[#003b46] m-[34px]">
             Our Key Diagnostic Services At Bhagawati <br className="hidden md:block" />
             Diagnostic Center
           </h2>
@@ -65,27 +65,27 @@ const KeyServices = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4">
           {services.map((service) => {
             const IconComponent = service.icon;
             return (
               <div
                 key={service.id}
-                className="w-full md:w-[386.66px] h-[275.2px] p-[10px_20px] group"
+                className="flex gap-5 group w-full md:w-[386.66px] h-[145.8px] m-[30px_0] p-[0_0_0_20px]"
               >
-                {/* Icon */}
-                <div className="flex-shrink-0 mb-4">
-                  <div className="w-14 h-14 bg-[#be127e]/10 rounded-lg flex items-center justify-center group-hover:bg-[#be127e] transition-colors duration-300">
-                    <IconComponent className="text-2xl text-[#be127e] group-hover:text-white transition-colors duration-300" />
+                {/* Icon on the left */}
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center group-hover:bg-[#be127e] transition-colors duration-300">
+                    <IconComponent className="text-3xl text-[#be127e] group-hover:text-white transition-colors duration-300" />
                   </div>
                 </div>
 
-                {/* Content */}
+                {/* Content on the right (stacked vertically) */}
                 <div className="flex-1">
-                  <h3 className="text-[16px] font-bold text-[#003b46] mt-[20px] mb-0">
+                  <h3 className="text-[20px] font-bold text-[#003b46] mb-[18px] hover:text-[#3498db] transition-colors duration-300 cursor-pointer">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 text-[16px] leading-relaxed mt-[20px]">
+                  <p className="text-gray-600 text-[16px] leading-relaxed">
                     {service.description}
                   </p>
                 </div>
