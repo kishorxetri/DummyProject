@@ -45,7 +45,7 @@ const Stats = () => {
                 <span className="text-3xl font-bold font-['Poppins'] leading-none mb-1">
                   {stat.count}
                 </span>
-                <span className="text-sm font-medium opacity-90 font-['Poppins']">
+                <span className="text-[15px] font-medium opacity-90 font-['Poppins']">
                   {stat.label}
                 </span>
               </div>

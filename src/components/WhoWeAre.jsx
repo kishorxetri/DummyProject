@@ -19,25 +19,27 @@ const WhoWeAre = () => {
   const thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
   return (
-    <section className="py-12 md:py-16 bg-white overflow-hidden">
+    <section className="pt-[15px] pb-12 md:pb-16 bg-white overflow-hidden">
       <div className="container mx-auto px-4 md:px-[150px]">
         <div className="flex flex-col md:flex-row gap-12 items-center">
 
           {/* Left Column: Text Content */}
           <div className="w-full md:w-1/2">
-            <div className="inline-block border-b-4 border-[#be127e] pb-1 mb-6">
-              <h2 className="text-3xl md:text-3xl font-bold text-[#003b46]">Who We Are</h2>
+            <div className="relative inline-block m-[0_0_24px] p-[10px_0_20px] group">
+              <h2 className="text-[24px] font-bold text-[#003b46]">Who We Are</h2>
+              {/* Animated underline - half width by default, full on hover */}
+              <div className="absolute bottom-0 left-0 h-[2px] w-1/2 bg-[#3498db] transition-all duration-300 group-hover:w-full"></div>
             </div>
 
-            <p className="text-[#555] text-base leading-relaxed mb-6 font-['Poppins']">
+            <p className="text-[#555] text-[16px] leading-relaxed mb-6 font-['Poppins']">
               We are a trusted diagnostic center located in Tikathali, Lalitpur, dedicated to providing reliable pathology, radiology, and health check-up services using the latest technology.
             </p>
 
-            <p className="text-[#555] text-base leading-relaxed mb-8 font-['Poppins']">
+            <p className="text-[#555] text-[16px] leading-relaxed mb-8 font-['Poppins']">
               Our professional team ensures precise testing and timely reports to support your healthcare journey.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-0.5 gap-x-8">
               {features.map((feature, index) => (
                 <FeatureItem key={index} text={feature} />
               ))}
@@ -100,7 +102,7 @@ const WhoWeAre = () => {
 
 // Feature Item Helper
 const FeatureItem = ({ text }) => (
-  <div className="flex items-center gap-3 group">
+  <div className="flex items-center gap-3 group mb-[35px]">
     <div className="w-6 h-6 rounded-full bg-[#be127e] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
       <FaChevronRight className="text-white text-xs" />
     </div>
