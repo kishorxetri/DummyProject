@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHeartbeat, FaFlask, FaCheckCircle } from "react-icons/fa";
+import { FaHeartbeat, FaFlask, FaCheckCircle, FaTimes } from "react-icons/fa";
 
 const Packages = () => {
   const packages = [
@@ -108,13 +108,14 @@ const Packages = () => {
               </div>
 
               {/* Features List */}
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-3 mb-6">
                 {pkg.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center gap-2">
-                    <FaCheckCircle
-                      className={`text-lg flex-shrink-0 ${feature.included ? 'text-[#be127e]' : 'text-gray-400'
-                        }`}
-                    />
+                    {feature.included ? (
+                      <FaCheckCircle className="text-lg flex-shrink-0 text-[#be127e]" />
+                    ) : (
+                      <FaTimes className="text-lg flex-shrink-0 text-gray-400" />
+                    )}
                     <span className="text-[14px] text-gray-700">
                       {feature.name}
                     </span>
@@ -123,8 +124,12 @@ const Packages = () => {
               </ul>
 
               {/* Book Now Button */}
-              <button className="w-full bg-[#be127e] text-white font-semibold py-3 rounded hover:bg-[#9e0f68] transition-colors duration-300">
-                Book Now
+              <button className="w-full relative bg-black text-white py-3 rounded font-semibold shadow-md overflow-hidden group">
+                <span className="absolute inset-0 w-full h-full flex">
+                  <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover:-translate-x-full"></span>
+                  <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover:translate-x-full"></span>
+                </span>
+                <span className="relative z-10">Book Now</span>
               </button>
             </div>
           ))}
