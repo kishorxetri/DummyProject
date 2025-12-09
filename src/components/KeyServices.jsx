@@ -47,7 +47,7 @@ const KeyServices = () => {
 
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-[28px] font-bold text-[#003b46] mb-4">
+          <h2 className="text-[28px] md:text-[38px] font-bold text-[#003b46] mb-4">
             Our Key Diagnostic Services At Bhagawati <br className="hidden md:block" />
             Diagnostic Center
           </h2>
@@ -71,10 +71,10 @@ const KeyServices = () => {
             return (
               <div
                 key={service.id}
-                className="flex gap-5 group"
+                className="w-full md:w-[386.66px] h-[275.2px] p-[10px_20px] group"
               >
                 {/* Icon */}
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 mb-4">
                   <div className="w-14 h-14 bg-[#be127e]/10 rounded-lg flex items-center justify-center group-hover:bg-[#be127e] transition-colors duration-300">
                     <IconComponent className="text-2xl text-[#be127e] group-hover:text-white transition-colors duration-300" />
                   </div>
@@ -82,10 +82,10 @@ const KeyServices = () => {
 
                 {/* Content */}
                 <div className="flex-1">
-                  <h3 className="text-[20px] font-bold text-[#003b46] mb-3">
+                  <h3 className="text-[16px] font-bold text-[#003b46] mt-[20px] mb-0">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 text-[15px] leading-relaxed">
+                  <p className="text-gray-600 text-[16px] leading-relaxed mt-[20px]">
                     {service.description}
                   </p>
                 </div>
