@@ -86,10 +86,10 @@ const Hero = () => {
               */}
               <div className="container mx-auto px-4 md:px-[150px] h-full flex items-center relative z-20">
 
-                <div className={`w-full md:w-[45%] -mt-20`}>
+                <div className={`w-full md:w-[45%] -mt-16`}>
 
                   {/* Title: Appears after background transition (1000ms) */}
-                  <h1 className={`text-3xl md:text-[38px] font-bold text-[#003b46] leading-tight transition-all duration-1000 ease-out delay-1000 transform ${isActive ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
+                  <h1 className={`text-[28px] md:text-[38px] font-bold text-[#003b46] leading-tight transition-all duration-1000 ease-out delay-1000 transform ${isActive ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
                     }`}>
                     {slide.title}
                   </h1>
@@ -148,9 +148,9 @@ const Hero = () => {
           {/* Card 1 */}
           <div className="bg-[#8e0c60] text-white p-6 md:p-[30px] w-full md:w-[330px] h-[308px] hover:bg-[#720a4d] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,18,126,0.5)] transition duration-300 relative overflow-hidden group flex flex-col justify-between rounded-lg shadow-xl">
             <div className="relative z-10">
-              <div className="text-sm md:text-base font-semibold mb-2 md:mb-3 opacity-90 uppercase tracking-wide">24/7 Support</div>
-              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-5">Emergency Cases</h3>
-              <p className="text-sm md:text-base opacity-90 mb-4 md:mb-6 leading-relaxed">
+              <div className="text-[16px] font-semibold mb-2 md:mb-3 opacity-90 uppercase tracking-wide">24/7 Support</div>
+              <h3 className="text-[20px] font-bold mb-3 md:mb-5">Emergency Cases</h3>
+              <p className="text-[16px] opacity-90 mb-4 md:mb-6 leading-relaxed">
                 If you need urgent medical diagnostics, we are just a call away. We provide emergency lab services at Tikathali, Lalitpur.
               </p>
             </div>
@@ -166,9 +166,9 @@ const Hero = () => {
           {/* Card 2 */}
           <div className="bg-[#be127e] text-white p-6 md:p-[30px] w-full md:w-[330px] h-[308px] hover:bg-[#9d0f68] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,18,126,0.5)] transition duration-300 relative overflow-hidden group flex flex-col justify-between rounded-lg shadow-xl">
             <div className="relative z-10">
-              <div className="text-sm md:text-base font-semibold mb-2 md:mb-3 opacity-90 uppercase tracking-wide">Expert Team</div>
-              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-5">Doctors Timetable</h3>
-              <p className="text-sm md:text-base opacity-90 mb-4 md:mb-6 leading-relaxed">
+              <div className="text-[16px] font-semibold mb-2 md:mb-3 opacity-90 uppercase tracking-wide">Expert Team</div>
+              <h3 className="text-[20px] font-bold mb-3 md:mb-5">Doctors Timetable</h3>
+              <p className="text-[16px] opacity-90 mb-4 md:mb-6 leading-relaxed">
                 Check available time slots for our diagnostic specialists. Our team is always ready to assist you with accuracy and care.
               </p>
             </div>
@@ -184,9 +184,9 @@ const Hero = () => {
           {/* Card 3 */}
           <div className="bg-[#8e0c60] text-white p-6 md:p-[30px] w-full md:w-[330px] h-[308px] hover:bg-[#720a4d] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,18,126,0.5)] transition duration-300 relative overflow-hidden group flex flex-col justify-between rounded-lg shadow-xl">
             <div className="relative z-10">
-              <div className="text-sm md:text-base font-semibold mb-2 md:mb-3 opacity-90 uppercase tracking-wide">Visit Us</div>
-              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-5">Opening Hours</h3>
-              <p className="text-sm md:text-base opacity-90 mb-4 md:mb-6 leading-relaxed">
+              <div className="text-[16px] font-semibold mb-2 md:mb-3 opacity-90 uppercase tracking-wide">Visit Us</div>
+              <h3 className="text-[20px] font-bold mb-3 md:mb-5">Opening Hours</h3>
+              <p className="text-[16px] opacity-90 mb-4 md:mb-6 leading-relaxed">
                 Sunday - Saturday 6:00 AM - 9:00 PM <br /><br />
                 Always Open - 7 Days a Week, No Holidays
               </p>

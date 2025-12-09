@@ -6,7 +6,7 @@ const HygieneSection = () => {
     <div className="container mx-auto px-4 md:px-[150px] text-center">
 
       {/* Heading */}
-      <h2 className="text-[28px] font-bold text-[#003b46] mb-4">
+      <h2 className="text-[26px] md:text-[32px] font-bold text-[#003b46] mb-4">
         We Maintain The Highest Hygiene <br className="hidden md:block" /> And Cleanliness Standards
       </h2>
 
