@@ -146,7 +146,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 -mt-[170px] md:-mt-[170px]">
 
           {/* Card 1 */}
-          <div className="bg-[#8e0c60] text-white p-6 md:p-[30px] w-full md:w-[330px] h-[308px] hover:bg-[#720a4d] hover:-translate-y-2 transition duration-300 relative overflow-hidden group flex flex-col justify-between rounded-lg shadow-xl">
+          <div className="bg-[#8e0c60] text-white p-6 md:p-[30px] w-full md:w-[330px] h-[308px] hover:bg-[#720a4d] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,18,126,0.5)] transition duration-300 relative overflow-hidden group flex flex-col justify-between rounded-lg shadow-xl">
             <div className="relative z-10">
               <div className="text-sm md:text-base font-semibold mb-2 md:mb-3 opacity-90 uppercase tracking-wide">24/7 Support</div>
               <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-5">Emergency Cases</h3>
@@ -164,7 +164,7 @@ const Hero = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-[#be127e] text-white p-6 md:p-[30px] w-full md:w-[330px] h-[308px] hover:bg-[#9d0f68] hover:-translate-y-2 transition duration-300 relative overflow-hidden group flex flex-col justify-between rounded-lg shadow-xl">
+          <div className="bg-[#be127e] text-white p-6 md:p-[30px] w-full md:w-[330px] h-[308px] hover:bg-[#9d0f68] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,18,126,0.5)] transition duration-300 relative overflow-hidden group flex flex-col justify-between rounded-lg shadow-xl">
             <div className="relative z-10">
               <div className="text-sm md:text-base font-semibold mb-2 md:mb-3 opacity-90 uppercase tracking-wide">Expert Team</div>
               <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-5">Doctors Timetable</h3>
@@ -182,7 +182,7 @@ const Hero = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-[#8e0c60] text-white p-6 md:p-[30px] w-full md:w-[330px] h-[308px] hover:bg-[#720a4d] hover:-translate-y-2 transition duration-300 relative overflow-hidden group flex flex-col justify-between rounded-lg shadow-xl">
+          <div className="bg-[#8e0c60] text-white p-6 md:p-[30px] w-full md:w-[330px] h-[308px] hover:bg-[#720a4d] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,18,126,0.5)] transition duration-300 relative overflow-hidden group flex flex-col justify-between rounded-lg shadow-xl">
             <div className="relative z-10">
               <div className="text-sm md:text-base font-semibold mb-2 md:mb-3 opacity-90 uppercase tracking-wide">Visit Us</div>
               <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-5">Opening Hours</h3>
