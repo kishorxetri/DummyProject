@@ -12,6 +12,8 @@ import Packages from "./components/Packages.jsx";
 import Specialists from "./components/Specialists.jsx";
 import Updates from "./components/Updates.jsx"; 
 import BlogArticleGrid from "./components/BlogArticleGrid.jsx"; 
+import ClientLogos from "./components/ClientLogos.jsx";
+import AppointmentSection from "./components/AppointmentSection.jsx";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
       <Specialists />
       <Updates />
       <BlogArticleGrid />
+      <ClientLogos />
+      <AppointmentSection />
     </>
   )
 }
