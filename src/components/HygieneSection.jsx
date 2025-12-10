@@ -5,12 +5,10 @@ const HygieneSection = () => {
   return (<div className="pt-[50px] pb-[50px] bg-white font-['Poppins']">
     <div className="container mx-auto px-4 md:px-[150px] text-center">
 
-      {/* Heading */}
       <h2 className="text-[26px] md:text-[32px] font-bold text-[#003b46] mb-4">
         We Maintain The Highest Hygiene <br className="hidden md:block" /> And Cleanliness Standards
       </h2>
 
-      {/* Divider with Heartbeat */}
       <div className="flex items-center justify-center gap-2 mb-6">
         <div className="h-[2px] w-8 bg-[#3498db]"></div>
         <FaHeartbeat className="text-[#3498db] text-xl" />

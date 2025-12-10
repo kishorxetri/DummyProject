@@ -10,6 +10,7 @@ import FacilitiesGallery from "./components/FacilitiesGallery.jsx";
 import KeyServices from "./components/KeyServices.jsx";
 import Packages from "./components/Packages.jsx";
 import Specialists from "./components/Specialists.jsx";
+import Updates from "./components/Updates.jsx"; 
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <KeyServices />
       <Packages />
       <Specialists />
+      <Updates />
     </>
   )
 }
