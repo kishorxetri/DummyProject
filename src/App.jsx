@@ -11,6 +11,7 @@ import KeyServices from "./components/KeyServices.jsx";
 import Packages from "./components/Packages.jsx";
 import Specialists from "./components/Specialists.jsx";
 import Updates from "./components/Updates.jsx"; 
+import BlogArticleGrid from "./components/BlogArticleGrid.jsx"; 
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Packages />
       <Specialists />
       <Updates />
+      <BlogArticleGrid />
     </>
   )
 }

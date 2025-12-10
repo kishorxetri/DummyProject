@@ -76,7 +76,7 @@ const Packages = () => {
           {packages.map((pkg) => (
             <div
               key={pkg.id}
-              className="bg-white border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow duration-300 text-left"
+              className="bg-white border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow duration-300 text-left relative group"
             >
               {/* Flask Icon */}
               <div className="flex justify-center mb-4">
@@ -124,13 +124,16 @@ const Packages = () => {
               </ul>
 
               {/* Book Now Button */}
-              <button className="w-full relative bg-black text-white py-3 rounded font-semibold shadow-md overflow-hidden group">
+              <button className="w-full relative bg-black text-white py-3 rounded font-semibold shadow-md overflow-hidden group/btn">
                 <span className="absolute inset-0 w-full h-full flex">
-                  <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover:-translate-x-full"></span>
-                  <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover:translate-x-full"></span>
+                  <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover/btn:-translate-x-full"></span>
+                  <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover/btn:translate-x-full"></span>
                 </span>
                 <span className="relative z-10">Book Now</span>
               </button>
+
+              {/* Bottom Blue Line on Hover */}
+              <div className="absolute bottom-0 left-0 w-0 h-[3px] bg-[#003b46] group-hover:w-full transition-all duration-500 ease-out rounded-b-lg"></div>
             </div>
           ))}
         </div>
