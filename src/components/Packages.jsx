@@ -72,7 +72,7 @@ const Packages = () => {
         </p>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {packages.map((pkg) => (
             <div
               key={pkg.id}
@@ -84,7 +84,7 @@ const Packages = () => {
               </div>
 
               {/* Package Name */}
-              <h3 className="text-[18px] font-bold text-[#003b46] text-center mb-3">
+              <h3 className="text-[20px] font-bold text-[#003b46] text-center mb-3">
                 {pkg.name}
               </h3>
 
@@ -92,10 +92,10 @@ const Packages = () => {
               <div className="text-center mb-4">
                 {pkg.discountedPrice ? (
                   <>
-                    <span className="text-[14px] line-through text-gray-400 mr-2">
+                    <span className="text-[16px] line-through text-gray-400 mr-2">
                       ₹{pkg.originalPrice}
                     </span>
-                    <span className="text-[20px] font-bold text-[#27ae60]">
+                    <span className="text-[18px] font-bold text-[#27ae60]">
                       ₹{pkg.discountedPrice}
                     </span>
                   </>
@@ -116,7 +116,7 @@ const Packages = () => {
                     ) : (
                       <FaTimes className="text-lg flex-shrink-0 text-gray-400" />
                     )}
-                    <span className="text-[14px] text-gray-700">
+                    <span className="text-[16px] text-gray-700">
                       {feature.name}
                     </span>
                   </li>
