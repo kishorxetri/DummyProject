@@ -1,4 +1,7 @@
 import React from "react";
+import "@fontsource/poppins";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
 
 const BlogArticleGrid = () => {
   const articles = [
@@ -9,7 +12,7 @@ const BlogArticleGrid = () => {
       excerpt:
         "Choosing The Right Diagnostic Center For Accurate Results Is Essential For Maintaining Your Health And Well-Being. Medical Testing Plays A Vital Role In Detecting Health...",
       image:
-        "https://cdn.pixabay.com/photo/2018/05/28/19/46/microscope-3435823_1280.jpg", // FIXED IMAGE
+        "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800&q=80",
     },
     {
       id: 2,
@@ -32,40 +35,43 @@ const BlogArticleGrid = () => {
   ];
 
   return (
-    <section className="bg-white py-14 font-poppins">
-      <div className="max-w-[1300px] mx-auto px-4 lg:px-10">
+    <section className="bg-white py-16 font-['Poppins']">
+      <div className="container mx-auto px-4 md:px-[150px]">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.map((a) => (
             <article
               key={a.id}
-              className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+              className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,59,70,0.3)] transition-all duration-300 group relative"
             >
               {/* Image */}
               <div className="w-full h-[260px] overflow-hidden">
                 <img
                   src={a.image}
                   alt={a.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
 
               {/* Content */}
-              <div className="p-7">
+              <div className="p-6">
 
-                <span className="inline-block bg-[#be127e] text-white text-sm font-medium px-4 py-1.5 rounded-md mb-4">
+                <span className="inline-block bg-[#be127e] text-white text-[14px] font-semibold px-4 py-2 rounded-md mb-4 uppercase tracking-wide">
                   {a.date}
                 </span>
 
-                <h3 className="text-[20px] font-semibold text-gray-800 leading-snug mb-4">
+                <h3 className="text-[20px] font-bold text-[#003b46] group-hover:text-[#003b46]/80 leading-snug mb-4 font-['Poppins'] transition-colors duration-300">
                   {a.title}
                 </h3>
 
-                <p className="text-[15px] text-gray-600 leading-relaxed">
+                <p className="text-[16px] text-[#444] leading-relaxed font-medium font-['Poppins']">
                   {a.excerpt}
                 </p>
 
               </div>
+
+              {/* Bottom Blue Line on Hover */}
+              <div className="absolute bottom-0 left-0 w-0 h-[3px] bg-[#003b46] group-hover:w-full transition-all duration-500 ease-out"></div>
             </article>
           ))}
         </div>
