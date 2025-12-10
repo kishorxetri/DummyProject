@@ -61,7 +61,7 @@ const Header = () => {
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="w-full bg-[#003b46] text-white text-sm py-2 px-6 md:px-35 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0 ">
+      <div className="w-full bg-white text-[#003b46] text-sm py-2 px-6 md:px-[150px] flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
 
         <div className="flex items-center space-x-6">
           <div className="flex items-center space-x-2">
@@ -76,10 +76,10 @@ const Header = () => {
         </div>
 
         <div className="hidden md:flex items-center space-x-6">
-          <Link to="/about" className="hover:text-gray-300 transition">About</Link>
-          <Link to="/doctors" className="hover:text-gray-300 transition">Doctors</Link>
-          <Link to="/contact" className="hover:text-gray-300 transition">Contact</Link>
-          <Link to="/faq" className="hover:text-gray-300 transition">FAQ</Link>
+          <Link to="/about" className="hover:text-[#be127e] transition">About</Link>
+          <Link to="/doctors" className="hover:text-[#be127e] transition">Doctors</Link>
+          <Link to="/contact" className="hover:text-[#be127e] transition">Contact</Link>
+          <Link to="/faq" className="hover:text-[#be127e] transition">FAQ</Link>
 
           <div className="relative">
             <FaShoppingCart className="text-lg" />
@@ -91,10 +91,10 @@ const Header = () => {
       </div>
 
       {/* Main Navbar */}
-      <div className="sticky top-0 z-[100] w-full bg-white shadow-md flex items-center justify-between px-6 md:px-35 py-4 h-[89.44px]">
+      <div className="sticky top-0 z-[100] w-full bg-white shadow-md flex items-center justify-between px-6 md:px-[150px] py-4 h-[89.44px]">
 
         <Link to="/">
-          <img src={logo} alt="Logo" className="h-12 md:h-16" />
+          <img src="https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/bhagawati.png" alt="Logo" className="h-12 md:h-16" />
         </Link>
 
         <button
