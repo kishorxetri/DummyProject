@@ -14,9 +14,7 @@ const Header = () => {
       name: "About Us",
       path: "#",
       dropdown: [
-        { name: "Message from our Chairman", path: "#" },
-        { name: "Mission & Vision", path: "#" },
-        { name: "Our History", path: "#" },
+        { name: "Message from Our Chairman", path: "/chairman-message" },
       ],
     },
     {
@@ -56,7 +54,7 @@ const Header = () => {
   const dropdownClass =
     "absolute top-full left-0 mt-2 w-56 bg-white shadow-xl rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50";
   const dropdownItemClass =
-    "block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#be127e] text-sm border-b border-gray-100 last:border-0 transition-colors";
+    "block px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-[#be127e]/5 hover:to-transparent hover:text-[#be127e] text-sm border-b border-gray-100 last:border-0 transition-all duration-300 hover:pl-6 hover:border-l-4 hover:border-l-[#be127e] font-medium";
 
   return (
     <>
