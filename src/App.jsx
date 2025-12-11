@@ -15,6 +15,8 @@ import BlogArticleGrid from "./components/BlogArticleGrid.jsx";
 import ClientLogos from "./components/ClientLogos.jsx";
 import AppointmentSection from "./components/AppointmentSection.jsx";
 import MapLocation from "./components/MapLocation.jsx";
+import Newsletter from "./components/Newsletter.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
@@ -36,8 +38,11 @@ function App() {
       <ClientLogos />
       <AppointmentSection />
       <MapLocation />
+      <Newsletter />
+      <Footer />
     </>
   )
 }
 
 export default App
+
