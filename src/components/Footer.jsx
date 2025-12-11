@@ -17,14 +17,14 @@ const Footer = () => {
   return (
     <footer className="bg-[#be127e] text-white font-['Poppins']">
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 md:px-[150px] py-12">
+      <div className="container mx-auto px-4 md:px-[150px] py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Us */}
           <div>
             <h3 className="text-[20px] font-semibold mb-4 pb-2 border-b-2 border-white inline-block">
               About Us
             </h3>
-            <p className="text-[14px] leading-relaxed mb-6 mt-4">
+            <p className="text-[16px] leading-relaxed mb-6 mt-6 font-['Poppins']">
               We are a trusted diagnostic center located in Tikathali, Lalitpur, dedicated to providing reliable pathology, radiology, and health check-up services using the latest technology.
             </p>
             {/* Social Media Icons */}
@@ -61,58 +61,62 @@ const Footer = () => {
             <h3 className="text-[20px] font-semibold mb-4 pb-2 border-b-2 border-white inline-block">
               Quick Links
             </h3>
-            <ul className="space-y-2 mt-4">
-              <li>
-                <a href="#home" className="text-[14px] hover:text-gray-200 transition-colors flex items-center gap-2">
-                  <span className="text-white">▸</span> Home
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="text-[14px] hover:text-gray-200 transition-colors flex items-center gap-2">
-                  <span className="text-white">▸</span> About Us
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-[14px] hover:text-gray-200 transition-colors flex items-center gap-2">
-                  <span className="text-white">▸</span> Services
-                </a>
-              </li>
-              <li>
-                <a href="#consulting" className="text-[14px] hover:text-gray-200 transition-colors flex items-center gap-2">
-                  <span className="text-white">▸</span> Consulting
-                </a>
-              </li>
-              <li>
-                <a href="#finance" className="text-[14px] hover:text-gray-200 transition-colors flex items-center gap-2">
-                  <span className="text-white">▸</span> Finance
-                </a>
-              </li>
-              <li>
-                <a href="#testimonials" className="text-[14px] hover:text-gray-200 transition-colors flex items-center gap-2">
-                  <span className="text-white">▸</span> Testimonials
-                </a>
-              </li>
-              <li>
-                <a href="#cases" className="text-[14px] hover:text-gray-200 transition-colors flex items-center gap-2">
-                  <span className="text-white">▸</span> Our Cases
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="text-[14px] hover:text-gray-200 transition-colors flex items-center gap-2">
-                  <span className="text-white">▸</span> FAQ
-                </a>
-              </li>
-              <li>
-                <a href="#other" className="text-[14px] hover:text-gray-200 transition-colors flex items-center gap-2">
-                  <span className="text-white">▸</span> Other Links
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-[14px] hover:text-gray-200 transition-colors flex items-center gap-2">
-                  <span className="text-white">▸</span> Contact Us
-                </a>
-              </li>
-            </ul>
+            <div className="grid grid-cols-2 gap-x-8 mt-6">
+              <ul className="space-y-2.5 font-['Poppins']">
+                <li>
+                  <a href="#home" className="text-[16px] hover:text-gray-200 transition-colors flex items-center gap-2">
+                    <span className="text-white">▸</span> Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#about" className="text-[16px] hover:text-gray-200 transition-colors flex items-center gap-2">
+                    <span className="text-white">▸</span> About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#services" className="text-[16px] hover:text-gray-200 transition-colors flex items-center gap-2">
+                    <span className="text-white">▸</span> Services
+                  </a>
+                </li>
+                <li>
+                  <a href="#consulting" className="text-[16px] hover:text-gray-200 transition-colors flex items-center gap-2">
+                    <span className="text-white">▸</span> Consulting
+                  </a>
+                </li>
+                <li>
+                  <a href="#finance" className="text-[16px] hover:text-gray-200 transition-colors flex items-center gap-2">
+                    <span className="text-white">▸</span> Finance
+                  </a>
+                </li>
+                <li>
+                  <a href="#testimonials" className="text-[16px] hover:text-gray-200 transition-colors flex items-center gap-2">
+                    <span className="text-white">▸</span> Testimonials
+                  </a>
+                </li>
+              </ul>
+              <ul className="space-y-2.5 font-['Poppins']">
+                <li>
+                  <a href="#cases" className="text-[16px] hover:text-gray-200 transition-colors flex items-center gap-2">
+                    <span className="text-white">▸</span> Our Cases
+                  </a>
+                </li>
+                <li>
+                  <a href="#faq" className="text-[16px] hover:text-gray-200 transition-colors flex items-center gap-2">
+                    <span className="text-white">▸</span> FAQ
+                  </a>
+                </li>
+                <li>
+                  <a href="#other" className="text-[16px] hover:text-gray-200 transition-colors flex items-center gap-2">
+                    <span className="text-white">▸</span> Other Links
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="text-[16px] hover:text-gray-200 transition-colors flex items-center gap-2">
+                    <span className="text-white">▸</span> Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Open Hours */}
@@ -120,23 +124,23 @@ const Footer = () => {
             <h3 className="text-[20px] font-semibold mb-4 pb-2 border-b-2 border-white inline-block">
               Open Hours
             </h3>
-            <div className="space-y-3 mt-4">
+            <div className="space-y-3 mt-6 font-['Poppins']">
               <div className="flex items-start gap-2">
                 <span className="text-[14px]">📅</span>
                 <div>
-                  <p className="text-[14px] font-medium">Sunday to Saturday ( 6.00AM - 9.00PM )</p>
+                  <p className="text-[16px] font-medium">Sunday to Saturday ( 6.00AM - 9.00PM )</p>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <span className="text-[14px]">✅</span>
                 <div>
-                  <p className="text-[14px] font-medium">Always Open – 7 Days a Week</p>
+                  <p className="text-[16px] font-medium">Always Open – 7 Days a Week</p>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <span className="text-[14px]">🚫</span>
                 <div>
-                  <p className="text-[14px] font-medium">No Holidays</p>
+                  <p className="text-[16px] font-medium">No Holidays</p>
                 </div>
               </div>
             </div>
@@ -147,7 +151,7 @@ const Footer = () => {
             <h3 className="text-[20px] font-semibold mb-4 pb-2 border-b-2 border-white inline-block">
               Newsletter
             </h3>
-            <p className="text-[14px] leading-relaxed mb-4 mt-4">
+            <p className="text-[16px] leading-relaxed mb-4 mt-6 font-['Poppins']">
               subscribe to our newsletter to get allour news in your inbox. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             </p>
             <form onSubmit={handleNewsletterSubmit} className="relative">
@@ -156,7 +160,7 @@ const Footer = () => {
                 placeholder="Email Address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 pr-12 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-white text-[14px]"
+                className="w-full px-4 py-3 pr-12 rounded-md text-gray-800 border-2 border-white focus:outline-none focus:ring-2 focus:ring-white text-[16px] font-['Poppins']"
                 required
               />
               <button
@@ -173,7 +177,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="bg-[#a0106a] py-4">
         <div className="container mx-auto px-4 md:px-[150px]">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-[13px]">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-[14px] font-['Poppins']">
             <p>© 2025 Bhagawati Diagnostic Center Pvt. Ltd., All Rights Reserved.</p>
             <p>
               Developed by <span className="font-semibold">Smart Web Canter Center Pvt. Ltd.</span>
