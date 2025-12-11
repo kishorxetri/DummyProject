@@ -39,9 +39,13 @@ const Newsletter = () => {
               />
               <button
                 type="submit"
-                className="bg-gradient-to-r from-[#be127e] to-[#a0106a] hover:from-[#9d0f68] hover:to-[#8d0d5c] text-white px-8 py-3.5 rounded-lg font-semibold text-[15px] shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+                className="relative bg-gradient-to-r from-black to-gray-900 text-white px-8 py-3.5 rounded-lg font-semibold text-[15px] shadow-xl hover:shadow-2xl overflow-hidden group transform hover:scale-[1.02] transition-all duration-300"
               >
-                Subscribe
+                <span className="absolute inset-0 w-full h-full flex">
+                  <span className="w-1/2 h-full bg-gradient-to-r from-[#be127e] to-[#d4148a] transition-transform duration-500 ease-in-out group-hover:-translate-x-full"></span>
+                  <span className="w-1/2 h-full bg-gradient-to-l from-[#be127e] to-[#d4148a] transition-transform duration-500 ease-in-out group-hover:translate-x-full"></span>
+                </span>
+                <span className="relative z-10">Subscribe</span>
               </button>
             </form>
           </div>
