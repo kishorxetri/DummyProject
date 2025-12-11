@@ -71,7 +71,7 @@ const BlogArticleGrid = () => {
               </div>
 
               {/* Bottom Blue Line on Hover */}
-              <div className="absolute bottom-0 left-0 w-0 h-[3px] bg-[#003b46] group-hover:w-full transition-all duration-500 ease-out"></div>
+              <div className="absolute bottom-0 left-0 w-0 h-[3px] bg-gradient-to-r from-[#3498db] to-[#2980b9] group-hover:w-full transition-all duration-700 ease-out"></div>
             </article>
           ))}
         </div>

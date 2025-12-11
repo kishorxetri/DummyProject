@@ -76,11 +76,11 @@ const Packages = () => {
           {packages.map((pkg) => (
             <div
               key={pkg.id}
-              className="bg-white border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow duration-300 text-left relative group"
+              className="bg-white border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500 text-left relative group"
             >
               {/* Flask Icon */}
               <div className="flex justify-center mb-4">
-                <FaFlask className="text-5xl text-[#be127e]" />
+                <FaFlask className="text-5xl text-[#be127e] group-hover:scale-110 transition-transform duration-500" />
               </div>
 
               {/* Package Name */}
@@ -133,7 +133,7 @@ const Packages = () => {
               </button>
 
               {/* Bottom Blue Line on Hover */}
-              <div className="absolute bottom-0 left-0 w-0 h-[3px] bg-[#003b46] group-hover:w-full transition-all duration-500 ease-out rounded-b-lg"></div>
+              <div className="absolute bottom-0 left-0 w-0 h-[3px] bg-gradient-to-r from-[#3498db] to-[#2980b9] group-hover:w-full transition-all duration-700 ease-out rounded-b-lg"></div>
             </div>
           ))}
         </div>
