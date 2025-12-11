@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "@fontsource/poppins";
 import "@fontsource/poppins/600.css";
-import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
 import { FiSend } from "react-icons/fi";
 
@@ -152,7 +152,7 @@ const Footer = () => {
               Newsletter
             </h3>
             <p className="text-[16px] leading-relaxed mb-4 mt-6 font-['Poppins']">
-              subscribe to our newsletter to get allour news in your inbox. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              Subscribe to our newsletter to get all our latest news delivered straight to your inbox. Stay informed with updates that matter.
             </p>
             <form onSubmit={handleNewsletterSubmit} className="relative">
               <input
@@ -160,7 +160,7 @@ const Footer = () => {
                 placeholder="Email Address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 pr-12 rounded-md text-gray-800 border-2 border-white focus:outline-none focus:ring-2 focus:ring-white text-[16px] font-['Poppins']"
+                className="w-full px-4 py-3 pr-12 rounded-md text-gray-800 border-2 border-white focus:outline-none focus:ring-2 focus:ring-white text-[16px] font-['Poppins'] placeholder:text-white"
                 required
               />
               <button
@@ -186,15 +186,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* WhatsApp Floating Button */}
-      <a
-        href="https://wa.me/9779851234567"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-[#20ba5a] transition-all duration-300 hover:scale-110 z-50"
-      >
-        <FaWhatsapp className="text-3xl" />
-      </a>
+
     </footer>
   );
 };
