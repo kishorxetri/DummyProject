@@ -22,7 +22,7 @@ const Newsletter = () => {
               Sign up for newsletter
             </h2>
             <p className="text-[15px] text-[#666] leading-relaxed">
-              Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.
+              Stay updated with our latest news, offers, and helpful articles. Subscribe to our newsletter today.
             </p>
           </div>
 
