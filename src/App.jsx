@@ -10,10 +10,11 @@ import FacilitiesGallery from "./components/FacilitiesGallery.jsx";
 import KeyServices from "./components/KeyServices.jsx";
 import Packages from "./components/Packages.jsx";
 import Specialists from "./components/Specialists.jsx";
-import Updates from "./components/Updates.jsx"; 
-import BlogArticleGrid from "./components/BlogArticleGrid.jsx"; 
+import Updates from "./components/Updates.jsx";
+import BlogArticleGrid from "./components/BlogArticleGrid.jsx";
 import ClientLogos from "./components/ClientLogos.jsx";
 import AppointmentSection from "./components/AppointmentSection.jsx";
+import MapLocation from "./components/MapLocation.jsx";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <BlogArticleGrid />
       <ClientLogos />
       <AppointmentSection />
+      <MapLocation />
     </>
   )
 }
