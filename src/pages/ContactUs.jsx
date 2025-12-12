@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ContactInfoCards from "../components/ContactInfoCards";
 import "@fontsource/poppins";
 import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
@@ -42,6 +43,9 @@ const ContactUs = () => {
     <>
       <Header />
 
+      {/* Contact Info Cards */}
+
+
       {/* Main Contact Section */}
       <div className="bg-white py-16 font-['Poppins']">
         <div className="container mx-auto px-4 md:px-[150px]">
@@ -68,12 +72,13 @@ const ContactUs = () => {
             <div className="w-full">
 
               {/* Heading */}
-              <h2 className="text-[32px] md:text-[36px] font-bold text-[#003b46] mb-3">
-                Contact With Us
-              </h2>
-
-              {/* Blue underline */}
-              <div className="w-16 h-1 bg-[#3498db] mb-6"></div>
+              <div className="group mb-6">
+                <h2 className="text-[32px] md:text-[36px] font-bold text-[#003b46] mb-3 inline-block">
+                  Contact With Us
+                </h2>
+                {/* Blue underline with hover effect */}
+                <div className="w-16 h-1 bg-[#3498db] transition-all duration-300 group-hover:w-full"></div>
+              </div>
 
               {/* Subtitle */}
               <p className="text-[15px] md:text-[16px] text-gray-700 mb-8">
@@ -160,9 +165,13 @@ const ContactUs = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-[#be127e] to-[#a0106a] text-white px-8 py-3.5 rounded-md font-semibold text-[16px] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+                  className="relative w-full bg-black text-white px-8 py-3.5 rounded-md font-semibold text-[16px] shadow-lg overflow-hidden group"
                 >
-                  Send
+                  <span className="absolute inset-0 w-full h-full flex">
+                    <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover:-translate-x-full"></span>
+                    <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover:translate-x-full"></span>
+                  </span>
+                  <span className="relative z-10">Send</span>
                 </button>
               </form>
             </div>
@@ -170,7 +179,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-
+      <ContactInfoCards />
       <Footer />
     </>
   );
