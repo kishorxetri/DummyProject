@@ -84,7 +84,7 @@ const Hero = () => {
                   - md:px-[150px]: Symmetrical padding (150px left AND right).
                   - px-4: Mobile padding retained.
               */}
-              <div className="container mx-auto px-4 md:px-[150px] h-full flex items-center relative z-20">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center relative z-20">
 
                 <div className={`w-full md:w-[45%] -mt-16`}>
 
@@ -142,7 +142,7 @@ const Hero = () => {
         </a>
       </div>
       {/* Cards Section - Overlapping with slider */}
-      <div className="container mx-auto px-4 md:px-[150px] relative z-40">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-40">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 -mt-[170px] md:-mt-[170px]">
 
           {/* Card 1 */}

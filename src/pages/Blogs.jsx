@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Updates from "../components/Updates";
-import BlogArticleGrid from "../components/BlogArticleGrid";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
+import Updates from "../components/sections/Updates";
+import BlogArticleGrid from "../components/sections/BlogArticleGrid";
 import "@fontsource/poppins";
 import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";

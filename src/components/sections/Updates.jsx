@@ -3,7 +3,7 @@ import { FaHeartbeat } from "react-icons/fa";
 
 const Updates = () => {
   return (<div className="pt-[50px] pb-[50px] bg-white font-['Poppins']">
-    <div className="container mx-auto px-4 md:px-[150px] text-center">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
       <h2 className="text-[26px] md:text-[32px] font-bold text-[#003b46] mb-4">
         Latest Health Updates from Bhagawati<br className="hidden md:block" /> Diagnostic Center

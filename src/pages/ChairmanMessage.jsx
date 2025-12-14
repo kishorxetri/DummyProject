@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
 import "@fontsource/poppins";
 import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
@@ -38,7 +38,7 @@ const ChairmanMessage = () => {
 
       {/* Main Content Section */}
       <div className="bg-white py-16 font-['Poppins']">
-        <div className="container mx-auto px-4 md:px-[150px]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Content Grid - Image Left, Text Right */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">

@@ -14,7 +14,7 @@ const Newsletter = () => {
 
   return (
     <section className="bg-gradient-to-br from-[#f8f8f8] to-[#f0f0f0] py-16 font-['Poppins']">
-      <div className="container mx-auto px-4 md:px-[150px]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10 bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg">
           {/* Left Side - Text */}
           <div className="text-left max-w-md">
