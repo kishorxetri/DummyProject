@@ -30,7 +30,7 @@ const Specialists = () => {
 
   return (
     <div className="pt-[50px] pb-[50px] bg-gradient-to-b from-gray-50 to-white font-['Poppins']">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 md:px-[150px]">
 
         <h2 className="text-[32px] font-bold text-[#003b46] mb-16 tracking-tight">
           Our Specialists

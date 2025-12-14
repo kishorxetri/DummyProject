@@ -38,7 +38,7 @@ const ChairmanMessage = () => {
 
       {/* Main Content Section */}
       <div className="bg-white py-16 font-['Poppins']">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 md:px-[150px]">
 
           {/* Content Grid - Image Left, Text Right */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">

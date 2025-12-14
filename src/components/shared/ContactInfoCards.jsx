@@ -24,7 +24,7 @@ const ContactInfoCards = () => {
 
   return (
     <section className="bg-white py-12 md:py-16 font-['Poppins']">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 md:px-[150px]">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {contactInfo.map((item, index) => {
             const IconComponent = item.icon;

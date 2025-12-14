@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaPhoneAlt, FaEnvelope, FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
-import logo from "../../assets/bhagawati.png";
+//import logo from "../../assets/bhagawati.png";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -59,7 +59,7 @@ const Header = () => {
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="w-full bg-white text-[#003b46] text-sm py-2 px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
+      <div className="w-full bg-white text-[#003b46] text-sm py-2 px-6 md:px-[150px] flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
 
         <div className="flex items-center space-x-6">
           <div className="flex items-center space-x-2">
@@ -89,7 +89,7 @@ const Header = () => {
       </div>
 
       {/* Main Navbar */}
-      <div className="sticky top-0 z-[100] w-full bg-white shadow-md flex items-center justify-between px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-4 h-[89.44px]">
+      <div className="sticky top-0 z-[100] w-full bg-white shadow-md flex items-center justify-between px-6 md:px-[150px] py-4 h-[89.44px]">
 
         <Link to="/">
           <img src="https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/bhagawati.png" alt="Logo" className="h-12 md:h-16" />
