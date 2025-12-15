@@ -1,32 +1,58 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Specialists = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const specialists = [
     {
       id: 1,
       name: "Dr. Ravi Kiran Gautam",
-      image: "https://bhagawatidiagnostic.com/wp-content/uploads/2025/06/health-camp-300x225.jpg",
+      image: "/images/health-camp-300x225.jpg",
       specialty: "Medical Specialist",
     },
     {
       id: 2,
       name: "Dr. Sudarshan Koirala",
-      image: "https://bhagawatidiagnostic.com/wp-content/uploads/2025/07/Dr-sudarsan-266x300.png",
+      image: "/images/Dr-sudarsan-266x300.png",
       specialty: "Medical Specialist",
     },
     {
       id: 3,
       name: "Dr. Rajesh Shakya",
-      image: "https://bhagawatidiagnostic.com/wp-content/uploads/2025/07/Dr.-Rajesh-Shakya.png",
+      image: "/images/Dr.-Rajesh-Shakya.png",
       specialty: "Medical Specialist",
     },
     {
       id: 4,
       name: "Dr. Ram Hari Chapagain",
-      image: "https://bhagawatidiagnostic.com/wp-content/uploads/2025/07/Dr.-Ram-Hari-Chapagain-271x300.webp",
+      image: "/images/Dr.-Ram-Hari-Chapagain-271x300.webp",
+      specialty: "Medical Specialist",
+    },
+    {
+      id: 5,
+      name: "Dr. Goma GC Thapa",
+      image: "/images/Dr.-Goma-GC-Thapa-300x268.jpg",
       specialty: "Medical Specialist",
     },
   ];
+
+  // Auto-rotate every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % specialists.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [specialists.length]);
+
+  // Get 4 visible specialists starting from currentIndex
+  const getVisibleSpecialists = () => {
+    const visible = [];
+    for (let i = 0; i < 4; i++) {
+      const index = (currentIndex + i) % specialists.length;
+      visible.push(specialists[index]);
+    }
+    return visible;
+  };
 
   return (
     <div className="pt-[50px] pb-[50px] bg-gradient-to-b from-gray-50 to-white font-['Poppins']">
@@ -37,10 +63,10 @@ const Specialists = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10">
-          {specialists.map((specialist) => (
+          {getVisibleSpecialists().map((specialist) => (
             <div
               key={specialist.id}
-              className="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 relative group hover:-translate-y-2"
+              className="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 relative group hover:-translate-y-2 animate-fadeIn"
             >
               {/* Hover Line Animation */}
               <div className="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-[#3498db] to-[#2980b9] w-0 group-hover:w-full transition-all duration-700 ease-out z-10"></div>
@@ -94,6 +120,22 @@ const Specialists = () => {
         </div>
 
       </div>
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.6s ease-out;
+        }
+      `}</style>
     </div>
   );
 };
