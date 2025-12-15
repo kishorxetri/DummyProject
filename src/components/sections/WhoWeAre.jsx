@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FaPlay, FaChevronRight } from "react-icons/fa";
 
 const WhoWeAre = () => {
   // State to toggle between thumbnail and video player
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const videoRef = useRef(null);
 
   const features = [
     "Modern diagnostic equipment",
@@ -14,9 +15,17 @@ const WhoWeAre = () => {
     "Convenient location in Tikathali"
   ];
 
-  // Video Configuration
-  const videoId = "ApMw4pjuA0o"; // Extracted from user's link
-  const thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  // Direct video URL
+  const videoUrl = "https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/videos/about%20bhagawati%20diagnostic.mp4";
+  // Thumbnail image of Bhagawati Diagnostic Center
+  const thumbnail = "/images/video-thumbnail.jpg";
+
+  const handlePlayVideo = () => {
+    setIsVideoPlaying(true);
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
 
   return (
     <section className="pt-[15px] pb-12 md:pb-16 bg-white overflow-hidden">
@@ -65,28 +74,29 @@ const WhoWeAre = () => {
                   {/* Pulse Animation Play Button */}
                   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                     <button
-                      onClick={() => setIsVideoPlaying(true)}
+                      onClick={handlePlayVideo}
                       className="relative flex items-center justify-center w-20 h-20 bg-[#8e0c60] rounded-full shadow-lg text-white z-20 hover:scale-110 transition-transform duration-300 cursor-pointer"
                       aria-label="Play Video"
                     >
                       <FaPlay className="text-2xl ml-1" />
 
                       {/* Pulse Circles */}
-                      <span className="absolute inline-flex h-full w-full rounded-full bg-[#be127e] opacity-75 animate-[ping_2s_ease-in-out_infinite] z-10"></span>
-                      <span className="absolute inline-flex h-full w-full rounded-full bg-[#8e0c60] opacity-40 animate-[ping_3s_ease-in-out_infinite_0.5s] z-0"></span>
+                      <span className="absolute inline-flex h-full w-full rounded-full bg-white opacity-75 animate-[ping_2s_ease-in-out_infinite] z-10"></span>
+                      <span className="absolute inline-flex h-full w-full rounded-full bg-white opacity-40 animate-[ping_3s_ease-in-out_infinite_0.5s] z-0"></span>
                     </button>
                   </div>
                 </>
               ) : (
                 /* --- 2. Video Player State (Active) --- */
-                <iframe
-                  className="w-full h-full"
-                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
+                <video
+                  ref={videoRef}
+                  className="w-full h-full object-cover"
+                  controls
+                  src={videoUrl}
                   title="Bhagawati Diagnostic Center Video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                >
+                  Your browser does not support the video tag.
+                </video>
               )}
 
             </div>

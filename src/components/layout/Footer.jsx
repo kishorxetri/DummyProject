@@ -90,13 +90,13 @@ const Footer = () => {
                     <span className="text-white">▸</span> Finance
                   </a>
                 </li>
+              </ul>
+              <ul className="space-y-3 font-['Poppins']">
                 <li>
                   <a href="#testimonials" className="text-[16px] text-white/90 hover:text-white hover:translate-x-1 transition-all duration-300 flex items-center gap-2">
                     <span className="text-white">▸</span> Testimonials
                   </a>
                 </li>
-              </ul>
-              <ul className="space-y-3 font-['Poppins']">
                 <li>
                   <a href="#cases" className="text-[16px] text-white/90 hover:text-white hover:translate-x-1 transition-all duration-300 flex items-center gap-2">
                     <span className="text-white">▸</span> Our Cases
