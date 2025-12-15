@@ -100,6 +100,7 @@ const Hero = () => {
                   {/* Buttons: Appear last */}
                   <div className={`flex flex-wrap gap-4 mt-8 transition-all duration-1000 ease-out delay-[1400ms] transform ${isActive ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                     }`}>
+                    {/* Get Appointment Button - Same for all slides */}
                     <button className="relative bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-md font-bold uppercase text-xs sm:text-sm tracking-wider shadow-lg overflow-hidden group">
                       <span className="absolute inset-0 w-full h-full flex">
                         <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover:-translate-x-full"></span>
@@ -107,9 +108,37 @@ const Hero = () => {
                       </span>
                       <span className="relative z-10">Get Appointment</span>
                     </button>
-                    <button className="bg-[#003b46] hover:bg-[#002830] text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-md font-bold uppercase text-xs sm:text-sm tracking-wider transition shadow-lg">
-                      Learn More
-                    </button>
+
+                    {/* Second Button - Changes based on slide */}
+                    {slide.id === 1 && (
+                      <button className="relative bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-md font-bold uppercase text-xs sm:text-sm tracking-wider shadow-lg overflow-hidden group">
+                        <span className="absolute inset-0 w-full h-full flex opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                          <span className="w-1/2 h-full bg-[#3498db] transition-transform duration-500 ease-in-out group-hover:-translate-x-full"></span>
+                          <span className="w-1/2 h-full bg-[#3498db] transition-transform duration-500 ease-in-out group-hover:translate-x-full"></span>
+                        </span>
+                        <span className="relative z-10">Learn More</span>
+                      </button>
+                    )}
+
+                    {slide.id === 2 && (
+                      <button className="relative bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-md font-bold uppercase text-xs sm:text-sm tracking-wider shadow-lg overflow-hidden group">
+                        <span className="absolute inset-0 w-full h-full flex opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                          <span className="w-1/2 h-full bg-[#3498db] transition-transform duration-500 ease-in-out group-hover:-translate-x-full"></span>
+                          <span className="w-1/2 h-full bg-[#3498db] transition-transform duration-500 ease-in-out group-hover:translate-x-full"></span>
+                        </span>
+                        <span className="relative z-10">Contact Now</span>
+                      </button>
+                    )}
+
+                    {slide.id === 3 && (
+                      <button className="relative bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-md font-bold uppercase text-xs sm:text-sm tracking-wider shadow-lg overflow-hidden group">
+                        <span className="absolute inset-0 w-full h-full flex opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                          <span className="w-1/2 h-full bg-[#3498db] transition-transform duration-500 ease-in-out group-hover:-translate-x-full"></span>
+                          <span className="w-1/2 h-full bg-[#3498db] transition-transform duration-500 ease-in-out group-hover:translate-x-full"></span>
+                        </span>
+                        <span className="relative z-10">About Us</span>
+                      </button>
+                    )}
                   </div>
                 </div>
 
