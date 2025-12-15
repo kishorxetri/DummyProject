@@ -127,23 +127,31 @@ const Footer = () => {
               Open Hours
               <span className="absolute bottom-0 left-0 w-1/2 h-0.5 bg-white/80 transition-all duration-300 group-hover:w-full group-hover:bg-white"></span>
             </h3>
-            <div className="space-y-4 mt-6 font-['Poppins']">
-              <div className="flex items-start gap-3 p-2 rounded-lg hover:bg-white/10 transition-all duration-300">
-                <span className="text-[18px] mt-0.5">📅</span>
+            <div className="space-y-3 mt-6 font-['Poppins']">
+              {/* Operating Hours */}
+              <div className="flex items-start gap-3 hover:translate-x-1 transition-all duration-300">
+                <span className="text-[20px] mt-0.5">🕐</span>
                 <div>
-                  <p className="text-[16px] font-medium text-white/90">Sunday to Saturday ( 6.00AM - 9.00PM )</p>
+                  <p className="text-[15px] font-semibold text-white/90 uppercase tracking-wide">Operating Hours</p>
+                  <p className="text-[16px] text-white/80 mt-1">6:00 AM - 9:00 PM</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3 p-2 rounded-lg hover:bg-white/10 transition-all duration-300">
-                <span className="text-[18px] mt-0.5">✅</span>
+
+              {/* Days Open */}
+              <div className="flex items-start gap-3 hover:translate-x-1 transition-all duration-300">
+                <span className="text-[20px] mt-0.5">📅</span>
                 <div>
-                  <p className="text-[16px] font-medium text-white/90">Always Open – 7 Days a Week</p>
+                  <p className="text-[15px] font-semibold text-white/90 uppercase tracking-wide">Days Open</p>
+                  <p className="text-[16px] text-white/80 mt-1">Sunday - Saturday</p>
+                  <p className="text-[14px] text-white/70 mt-0.5">Open 7 Days a Week</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3 p-2 rounded-lg hover:bg-white/10 transition-all duration-300">
-                <span className="text-[18px] mt-0.5">🚫</span>
+
+              {/* No Holidays */}
+              <div className="flex items-start gap-3 hover:translate-x-1 transition-all duration-300">
+                <span className="text-[20px] mt-0.5">✅</span>
                 <div>
-                  <p className="text-[16px] font-medium text-white/90">No Holidays</p>
+                  <p className="text-[16px] font-medium text-white/90">No Holidays - Always Available</p>
                 </div>
               </div>
             </div>

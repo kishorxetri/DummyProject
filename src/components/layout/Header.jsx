@@ -120,7 +120,7 @@ const Header = () => {
                 <li key={index} className={`${hoverUnderlineClass} flex items-center gap-1 cursor-pointer`}>
                   <Link
                     to={item.path}
-                    className={`flex items-center gap-1 ${active ? 'text-[#28a745]' : ''}`}
+                    className={`flex items-center gap-1 ${active ? 'text-[#be127e]' : ''}`}
                   >
                     {item.name}
                     {item.dropdown && <IoIosArrowDown className="text-sm" />}
@@ -160,7 +160,7 @@ const Header = () => {
               <div key={index} className="flex flex-col">
                 <Link
                   to={item.path}
-                  className={`font-medium py-1 ${active ? 'text-[#28a745]' : 'text-[#333] hover:text-[#be127e]'}`}
+                  className={`font-medium py-1 ${active ? 'text-[#be127e]' : 'text-[#333] hover:text-[#be127e]'}`}
                   onClick={() => !item.dropdown && setIsMobileMenuOpen(false)}
                 >
                   {item.name}
