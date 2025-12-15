@@ -11,7 +11,7 @@ const MapLocation = () => {
             <h2 className="text-[32px] font-bold text-[#003b46] mb-2">
               Find Us Here
             </h2>
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#3498db] rounded-full"></div>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-[#3498db] rounded-full"></div>
           </div>
           <p className="text-[16px] text-[#555] mt-4 max-w-2xl mx-auto">
             Visit us at our convenient location in Tikathali, Lalitpur. We're here to serve you with quality diagnostic services.
