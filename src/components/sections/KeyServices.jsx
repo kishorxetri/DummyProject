@@ -43,7 +43,7 @@ const KeyServices = () => {
 
   return (
     <section className="pt-[50px] pb-[15px] bg-white font-['Poppins']">
-      <div className="container mx-auto px-4 md:px-[150px]">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <div className="text-center mb-12">

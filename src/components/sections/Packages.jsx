@@ -52,7 +52,7 @@ const Packages = () => {
 
   return (
     <div className="pt-[50px] pb-[50px] bg-white font-['Poppins']">
-      <div className="container mx-auto px-4 md:px-[150px] text-center">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
         {/* Heading */}
         <h2 className="text-[32px] font-bold text-[#003b46] mb-4">
@@ -80,7 +80,9 @@ const Packages = () => {
             >
               {/* Flask Icon */}
               <div className="flex justify-center mb-4">
-                <FaFlask className="text-5xl text-[#be127e] group-hover:scale-110 transition-transform duration-500" />
+                <div className="w-20 h-20 rounded-full bg-[#be127e]/10 flex items-center justify-center group-hover:bg-[#be127e]/20 transition-all duration-500">
+                  <FaFlask className="text-4xl text-[#be127e] group-hover:scale-110 transition-transform duration-500" />
+                </div>
               </div>
 
               {/* Package Name */}

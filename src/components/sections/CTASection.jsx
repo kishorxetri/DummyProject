@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 const CTASection = () => {
   return (
     <section className="pt-[50px] pb-[15px] bg-[#be127e] font-['Poppins']">
-      <div className="container mx-auto px-4 flex justify-center">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
 
         {/* Content Container with specific dimensions */}
         <div className="w-full max-w-[1220px] h-[320px] p-[30px_256px_40px] text-center text-white flex flex-col items-center justify-center">

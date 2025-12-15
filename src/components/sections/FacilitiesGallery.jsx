@@ -48,16 +48,16 @@ const FacilitiesGallery = () => {
 
   return (
     <section className="pt-[15px] pb-0 bg-gray-50 font-['Poppins'] overflow-hidden">
-      <div className="container mx-auto px-4 md:px-[50px]">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Carousel Container */}
         <div className="relative">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {getVisibleItems().map((facility, idx) => (
               <div
                 key={`${facility.id}-${currentIndex}-${idx}`}
                 className="relative overflow-hidden group cursor-pointer shadow-lg animate-slideIn"
-                style={{ width: '350px', height: '280px', borderRadius: '0px' }}
+                style={{ height: '280px', borderRadius: '0px' }}
               >
                 {/* Image */}
                 <img

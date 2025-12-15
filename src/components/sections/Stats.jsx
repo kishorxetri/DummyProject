@@ -68,7 +68,7 @@ const Stats = () => {
 
   return (
     <div className="bg-[#be127e] py-12 md:py-16">
-      <div className="container mx-auto px-4 md:px-[150px]">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {statsData.map((stat, index) => (
             <div key={stat.id} className="flex items-center gap-4 text-white group cursor-default">

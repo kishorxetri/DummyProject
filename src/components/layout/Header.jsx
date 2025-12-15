@@ -59,78 +59,82 @@ const Header = () => {
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="w-full bg-white text-[#003b46] text-sm py-2 px-6 md:px-[150px] flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
+      <div className="w-full bg-white text-[#003b46] text-sm py-2">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
 
-        <div className="flex items-center space-x-6">
-          <div className="flex items-center space-x-2">
-            <FaPhoneAlt />
-            <span>9860953155</span>
+          <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-2">
+              <FaPhoneAlt />
+              <span>9860953155</span>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <FaEnvelope />
+              <span>bhagwoti999@gmail.com</span>
+            </div>
           </div>
 
-          <div className="flex items-center space-x-2">
-            <FaEnvelope />
-            <span>bhagwoti999@gmail.com</span>
-          </div>
-        </div>
+          <div className="hidden md:flex items-center space-x-6">
+            <Link to="/about" className="hover:text-[#be127e] transition">About</Link>
+            <Link to="/doctors" className="hover:text-[#be127e] transition">Doctors</Link>
+            <Link to="/contact" className="hover:text-[#be127e] transition">Contact</Link>
+            <Link to="/faq" className="hover:text-[#be127e] transition">FAQ</Link>
 
-        <div className="hidden md:flex items-center space-x-6">
-          <Link to="/about" className="hover:text-[#be127e] transition">About</Link>
-          <Link to="/doctors" className="hover:text-[#be127e] transition">Doctors</Link>
-          <Link to="/contact" className="hover:text-[#be127e] transition">Contact</Link>
-          <Link to="/faq" className="hover:text-[#be127e] transition">FAQ</Link>
-
-          <div className="relative">
-            <FaShoppingCart className="text-lg" />
-            <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-1">
-              0
-            </span>
+            <div className="relative">
+              <FaShoppingCart className="text-lg" />
+              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-1">
+                0
+              </span>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Main Navbar */}
-      <div className="sticky top-0 z-[100] w-full bg-white shadow-md flex items-center justify-between px-6 md:px-[150px] py-4 h-[89.44px]">
+      <div className="sticky top-0 z-[100] w-full bg-white shadow-md py-4 h-[89.44px]">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
 
-        <Link to="/">
-          <img src="https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/bhagawati.png" alt="Logo" className="h-12 md:h-16" />
-        </Link>
+          <Link to="/">
+            <img src="https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/bhagawati.png" alt="Logo" className="h-12 md:h-16" />
+          </Link>
 
-        <button
-          className="md:hidden text-2xl text-[#003b46] focus:outline-none"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-        </button>
+          <button
+            className="md:hidden text-2xl text-[#003b46] focus:outline-none"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+          </button>
 
-        <ul className="hidden md:flex items-center space-x-8 text-[17px] font-medium text-[#333]">
-          {navItems.map((item, index) => (
-            <li key={index} className={`${hoverUnderlineClass} flex items-center gap-1 cursor-pointer`}>
-              <Link to={item.path} className="flex items-center gap-1">
-                {item.name}
-                {item.dropdown && <IoIosArrowDown className="text-sm" />}
-              </Link>
-              <span className={underlineSpanClass}></span>
+          <ul className="hidden md:flex items-center space-x-8 text-[17px] font-medium text-[#333]">
+            {navItems.map((item, index) => (
+              <li key={index} className={`${hoverUnderlineClass} flex items-center gap-1 cursor-pointer`}>
+                <Link to={item.path} className="flex items-center gap-1">
+                  {item.name}
+                  {item.dropdown && <IoIosArrowDown className="text-sm" />}
+                </Link>
+                <span className={underlineSpanClass}></span>
 
-              {item.dropdown && (
-                <div className={dropdownClass}>
-                  {item.dropdown.map((subItem, subIndex) => (
-                    <Link key={subIndex} to={subItem.path} className={dropdownItemClass}>
-                      {subItem.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </li>
-          ))}
-        </ul>
+                {item.dropdown && (
+                  <div className={dropdownClass}>
+                    {item.dropdown.map((subItem, subIndex) => (
+                      <Link key={subIndex} to={subItem.path} className={dropdownItemClass}>
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
 
-        <button className="hidden md:block relative bg-black text-white px-6 py-2.5 rounded-md font-semibold shadow-md overflow-hidden group">
-          <span className="absolute inset-0 w-full h-full flex">
-            <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover:-translate-x-full"></span>
-            <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover:translate-x-full"></span>
-          </span>
-          <span className="relative z-10">Book Appointment</span>
-        </button>
+          <button className="hidden md:block relative bg-black text-white px-6 py-2.5 rounded-md font-semibold shadow-md overflow-hidden group">
+            <span className="absolute inset-0 w-full h-full flex">
+              <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover:-translate-x-full"></span>
+              <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover:translate-x-full"></span>
+            </span>
+            <span className="relative z-10">Book Appointment</span>
+          </button>
+        </div>
       </div>
 
       {isMobileMenuOpen && (
