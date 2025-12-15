@@ -7,7 +7,7 @@ const Services = () => {
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
         {/* Heading */}
-        <h2 className="text-[32px] font-bold text-[#003b46] mb-4">
+        <h2 className="text-[24px] sm:text-[28px] md:text-[32px] font-bold text-[#003b46] mb-4">
           We Offer Comprehensive Diagnostic <br className="hidden md:block" /> Services To Improve Your Health
         </h2>
 

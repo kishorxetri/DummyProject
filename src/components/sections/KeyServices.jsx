@@ -47,7 +47,7 @@ const KeyServices = () => {
 
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-[32px] font-bold text-[#003b46] m-[34px]">
+          <h2 className="text-[24px] sm:text-[28px] md:text-[32px] font-bold text-[#003b46] m-[34px]">
             Our Key Diagnostic Services At Bhagawati <br className="hidden md:block" />
             Diagnostic Center
           </h2>
@@ -71,21 +71,21 @@ const KeyServices = () => {
             return (
               <div
                 key={service.id}
-                className="flex gap-5 group w-full md:w-[386.66px] h-[145.8px] m-[30px_0] p-[0_0_0_20px]"
+                className="flex gap-3 sm:gap-5 group w-full min-h-[140px] my-4 sm:my-6 md:my-[30px] p-0 sm:pl-4 md:pl-5"
               >
                 {/* Icon on the left */}
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center group-hover:bg-[#be127e] transition-colors duration-300">
-                    <IconComponent className="text-3xl text-[#be127e] group-hover:text-white transition-colors duration-300" />
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center group-hover:bg-[#be127e] transition-colors duration-300">
+                    <IconComponent className="text-2xl sm:text-3xl text-[#be127e] group-hover:text-white transition-colors duration-300" />
                   </div>
                 </div>
 
                 {/* Content on the right (stacked vertically) */}
                 <div className="flex-1">
-                  <h3 className="text-[20px] font-bold text-[#003b46] mb-[18px] hover:text-[#3498db] transition-colors duration-300 cursor-pointer">
+                  <h3 className="text-[17px] sm:text-[19px] md:text-[20px] font-bold text-[#003b46] mb-2 sm:mb-3 md:mb-[18px] hover:text-[#3498db] transition-colors duration-300 cursor-pointer">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 text-[16px] leading-relaxed">
+                  <p className="text-gray-600 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed">
                     {service.description}
                   </p>
                 </div>

@@ -27,14 +27,14 @@ const FacilitiesGallery = () => {
     }
   ];
 
-  // Auto-rotate carousel
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % facilities.length);
-    }, 3000); // Change every 3 seconds
+  // Auto-rotate carousel - DISABLED
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % facilities.length);
+  //   }, 3000); // Change every 3 seconds
 
-    return () => clearInterval(interval);
-  }, [facilities.length]);
+  //   return () => clearInterval(interval);
+  // }, [facilities.length]);
 
   // Get visible items based on screen size
   const getVisibleItems = () => {
@@ -52,7 +52,7 @@ const FacilitiesGallery = () => {
 
         {/* Carousel Container */}
         <div className="relative">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {getVisibleItems().map((facility, idx) => (
               <div
                 key={`${facility.id}-${currentIndex}-${idx}`}
@@ -68,9 +68,11 @@ const FacilitiesGallery = () => {
 
                 {/* Pink Overlay on Hover */}
                 <div className="absolute inset-0 bg-[#be127e] opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
-                  <button className="bg-white text-[#be127e] font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-lg hover:bg-gray-100" style={{ fontSize: '16px', padding: '0px 25px', borderRadius: '3px', minWidth: '180px' }}>
-                    <FaEye />
-                    {facility.label}
+                  <button className="group/btn bg-white text-[#be127e] font-bold flex items-center justify-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg hover:bg-gray-100 px-6 py-3 rounded-sm min-w-[60px] hover:min-w-[220px]">
+                    <FaEye className="text-xl flex-shrink-0" />
+                    <span className="max-w-0 overflow-hidden whitespace-nowrap group-hover/btn:max-w-xs transition-all duration-300 text-[16px]">
+                      {facility.label}
+                    </span>
                   </button>
                 </div>
               </div>

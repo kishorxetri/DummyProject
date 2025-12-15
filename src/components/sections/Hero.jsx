@@ -13,8 +13,7 @@ const Hero = () => {
       id: 1,
       title: (
         <>
-          Welcome to <span className="text-[#be127e]">BHAGAWATI</span> <br />
-          Diagnostic Center <span className="text-[#be127e]">Pvt. Ltd.</span>
+          Welcome to <span className="text-[#be127e]">BHAGAWATI</span> Diagnostic Center <span className="text-[#be127e]">Pvt. Ltd.</span>
         </>
       ),
       description: "Your trusted medical diagnostic partner located at Tikathali, Lalitpur. We are committed to delivering accurate and timely healthcare services.",
@@ -25,8 +24,7 @@ const Hero = () => {
       id: 2,
       title: (
         <>
-          Serving <span className="text-[#be127e]">Lalitpur</span> with Diagnostic <br />
-          <span className="text-[#be127e]">Excellence</span>
+          Serving <span className="text-[#be127e]">Lalitpur</span> with Diagnostic <span className="text-[#be127e]">Excellence</span>
         </>
       ),
       description: "Experience high-quality healthcare diagnostics from trained professionals, right here in Tikathali.",
@@ -37,8 +35,7 @@ const Hero = () => {
       id: 3,
       title: (
         <>
-          Advanced <span className="text-[#be127e]">Diagnostic Center</span> <br />
-          for <span className="text-[#be127e]">Better Health</span>
+          Advanced <span className="text-[#be127e]">Diagnostic</span> With <span className="text-[#be127e]">Care</span>
         </>
       ),
       description: "State-of-the-art technology ensuring precise results for all your medical testing needs.",
@@ -89,13 +86,13 @@ const Hero = () => {
                 <div className={`w-full md:w-[45%] -mt-16`}>
 
                   {/* Title: Appears after background transition (1000ms) */}
-                  <h1 className={`text-[28px] md:text-[38px] font-bold text-[#003b46] leading-tight transition-all duration-1000 ease-out delay-1000 transform ${isActive ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
+                  <h1 className={`text-[24px] sm:text-[28px] md:text-[38px] font-bold text-[#003b46] leading-tight transition-all duration-1000 ease-out delay-1000 transform ${isActive ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
                     }`}>
                     {slide.title}
                   </h1>
 
                   {/* Description: Appears slightly after title */}
-                  <p className={`text-[#444] text-[16px] font-medium leading-relaxed mt-4 transition-all duration-1000 ease-out delay-[1200ms] transform ${isActive ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                  <p className={`text-[#444] text-[14px] sm:text-[15px] md:text-[16px] font-medium leading-relaxed mt-4 transition-all duration-1000 ease-out delay-[1200ms] transform ${isActive ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                     }`}>
                     {slide.description}
                   </p>
@@ -103,14 +100,14 @@ const Hero = () => {
                   {/* Buttons: Appear last */}
                   <div className={`flex flex-wrap gap-4 mt-8 transition-all duration-1000 ease-out delay-[1400ms] transform ${isActive ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                     }`}>
-                    <button className="relative bg-black text-white px-8 py-3 rounded-md font-bold uppercase text-sm tracking-wider shadow-lg overflow-hidden group">
+                    <button className="relative bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-md font-bold uppercase text-xs sm:text-sm tracking-wider shadow-lg overflow-hidden group">
                       <span className="absolute inset-0 w-full h-full flex">
                         <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover:-translate-x-full"></span>
                         <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover:translate-x-full"></span>
                       </span>
                       <span className="relative z-10">Get Appointment</span>
                     </button>
-                    <button className="bg-[#003b46] hover:bg-[#002830] text-white px-8 py-3 rounded-md font-bold uppercase text-sm tracking-wider transition shadow-lg">
+                    <button className="bg-[#003b46] hover:bg-[#002830] text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-md font-bold uppercase text-xs sm:text-sm tracking-wider transition shadow-lg">
                       Learn More
                     </button>
                   </div>
@@ -143,10 +140,10 @@ const Hero = () => {
       </div>
       {/* Cards Section - Overlapping with slider */}
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-40">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 -mt-[170px] md:-mt-[170px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 -mt-[100px] sm:-mt-[130px] md:-mt-[170px] px-4 sm:px-0">
 
           {/* Card 1 */}
-          <div className="bg-[#8e0c60] text-white p-6 md:p-[30px] w-full md:w-[330px] h-[308px] hover:bg-[#720a4d] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,18,126,0.5)] transition duration-300 relative overflow-hidden group flex flex-col justify-between rounded-lg shadow-xl">
+          <div className="bg-[#8e0c60] text-white p-5 sm:p-6 md:p-[30px] w-full md:w-[330px] min-h-[280px] md:h-[308px] hover:bg-[#720a4d] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,18,126,0.5)] transition duration-300 relative overflow-hidden group flex flex-col justify-between rounded-lg shadow-xl">
             <div className="relative z-10">
               <div className="text-[16px] font-semibold mb-2 md:mb-3 opacity-90 uppercase tracking-wide">24/7 Support</div>
               <h3 className="text-[20px] font-bold mb-3 md:mb-5">Emergency Cases</h3>
@@ -164,7 +161,7 @@ const Hero = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-[#be127e] text-white p-6 md:p-[30px] w-full md:w-[330px] h-[308px] hover:bg-[#9d0f68] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,18,126,0.5)] transition duration-300 relative overflow-hidden group flex flex-col justify-between rounded-lg shadow-xl">
+          <div className="bg-[#be127e] text-white p-5 sm:p-6 md:p-[30px] w-full md:w-[330px] min-h-[280px] md:h-[308px] hover:bg-[#9d0f68] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,18,126,0.5)] transition duration-300 relative overflow-hidden group flex flex-col justify-between rounded-lg shadow-xl">
             <div className="relative z-10">
               <div className="text-[16px] font-semibold mb-2 md:mb-3 opacity-90 uppercase tracking-wide">Expert Team</div>
               <h3 className="text-[20px] font-bold mb-3 md:mb-5">Doctors Timetable</h3>
@@ -182,7 +179,7 @@ const Hero = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-[#8e0c60] text-white p-6 md:p-[30px] w-full md:w-[330px] h-[308px] hover:bg-[#720a4d] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,18,126,0.5)] transition duration-300 relative overflow-hidden group flex flex-col justify-between rounded-lg shadow-xl">
+          <div className="bg-[#8e0c60] text-white p-5 sm:p-6 md:p-[30px] w-full md:w-[330px] min-h-[280px] md:h-[308px] hover:bg-[#720a4d] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,18,126,0.5)] transition duration-300 relative overflow-hidden group flex flex-col justify-between rounded-lg shadow-xl">
             <div className="relative z-10">
               <div className="text-[16px] font-semibold mb-2 md:mb-3 opacity-90 uppercase tracking-wide">Visit Us</div>
               <h3 className="text-[20px] font-bold mb-3 md:mb-5">Opening Hours</h3>

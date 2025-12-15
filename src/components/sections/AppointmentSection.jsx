@@ -14,7 +14,7 @@ const AppointmentSection = () => {
           {/* Left Side - Form */}
           <div className="text-center">
             {/* Heading */}
-            <h2 className="text-[32px] font-bold text-[#003b46] leading-tight mb-6 drop-shadow-sm">
+            <h2 className="text-[24px] sm:text-[28px] md:text-[32px] font-bold text-[#003b46] leading-tight mb-6 drop-shadow-sm">
               We Are Always Ready To<br />
               Help You. Book An<br />
               Appointment

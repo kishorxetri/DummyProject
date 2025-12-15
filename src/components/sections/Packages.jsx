@@ -55,7 +55,7 @@ const Packages = () => {
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
         {/* Heading */}
-        <h2 className="text-[32px] font-bold text-[#003b46] mb-4">
+        <h2 className="text-[24px] sm:text-[28px] md:text-[32px] font-bold text-[#003b46] mb-4">
           Affordable Diagnostic Packages At <br className="hidden md:block" />  Bhagawati Diagnostic Center
         </h2>
 
@@ -72,7 +72,7 @@ const Packages = () => {
         </p>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
           {packages.map((pkg) => (
             <div
               key={pkg.id}

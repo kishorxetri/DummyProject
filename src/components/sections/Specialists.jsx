@@ -32,11 +32,11 @@ const Specialists = () => {
     <div className="pt-[50px] pb-[50px] bg-gradient-to-b from-gray-50 to-white font-['Poppins']">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
 
-        <h2 className="text-[32px] font-bold text-[#003b46] mb-16 tracking-tight">
+        <h2 className="text-[24px] sm:text-[28px] md:text-[32px] font-bold text-[#003b46] mb-16 tracking-tight">
           Our Specialists
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10">
           {specialists.map((specialist) => (
             <div
               key={specialist.id}
