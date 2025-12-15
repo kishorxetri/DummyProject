@@ -13,9 +13,9 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="bg-gradient-to-br from-[#f8f8f8] to-[#f0f0f0] py-16 font-['Poppins']">
+    <section className="bg-white py-16 font-['Poppins']">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-10 bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-10">
           {/* Left Side - Text */}
           <div className="text-left max-w-md">
             <h2 className="text-[28px] md:text-[32px] font-semibold text-[#003b46] mb-4 leading-tight">

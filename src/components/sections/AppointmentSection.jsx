@@ -109,7 +109,7 @@ const AppointmentSection = () => {
           {/* Right Side - Image */}
           <div className="hidden lg:block">
             <img
-              src="https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/contact-img.jpg"
+              src="/images/contact-img.jpg"
               alt="Medical Appointment"
               className="w-full h-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300 ring-1 ring-gray-200"
             />

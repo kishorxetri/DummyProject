@@ -7,22 +7,22 @@ const FacilitiesGallery = () => {
   const facilities = [
     {
       id: 1,
-      image: "https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/pf1.jpg",
+      image: "/images/pf1.jpg",
       label: "View Selection Plan"
     },
     {
       id: 2,
-      image: "https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/pf2.jpg",
+      image: "/images/pf2.jpg",
       label: "View Reception"
     },
     {
       id: 3,
-      image: "https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/pf3.jpg",
+      image: "/images/pf3.jpg",
       label: "View Radiology Unit"
     },
     {
       id: 4,
-      image: "https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/pf4.jpg",
+      image: "/images/pf4.jpg",
       label: "View Lab Facility"
     }
   ];

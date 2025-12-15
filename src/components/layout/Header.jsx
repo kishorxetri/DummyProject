@@ -103,7 +103,7 @@ const Header = () => {
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
 
           <Link to="/">
-            <img src="https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/bhagawati.png" alt="Logo" className="h-12 md:h-16" />
+            <img src="/images/bhagawati.png" alt="Logo" className="h-12 md:h-16" />
           </Link>
 
           <button

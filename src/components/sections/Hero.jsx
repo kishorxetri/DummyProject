@@ -17,7 +17,7 @@ const Hero = () => {
         </>
       ),
       description: "Your trusted medical diagnostic partner located at Tikathali, Lalitpur. We are committed to delivering accurate and timely healthcare services.",
-      image: "https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/slider2.jpg",
+      image: "/images/slider2.jpg",
       alt: "Bhagawati Diagnostic Center"
     },
     {
@@ -28,7 +28,7 @@ const Hero = () => {
         </>
       ),
       description: "Experience high-quality healthcare diagnostics from trained professionals, right here in Tikathali.",
-      image: "https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/slider3.jpg",
+      image: "/images/slider3.jpg",
       alt: "Doctor"
     },
     {
@@ -39,7 +39,7 @@ const Hero = () => {
         </>
       ),
       description: "State-of-the-art technology ensuring precise results for all your medical testing needs.",
-      image: "https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/slider.jpg",
+      image: "/images/slider.jpg",
       alt: "Laboratory"
     }
   ];

@@ -21,7 +21,7 @@ const BlogArticleGrid = () => {
       excerpt:
         "Early Detection Saves Lives Through Accurate Diagnostics And Preventive Health Screenings, Enabling Timely Treatment, Faster Recovery, And Peace Of Mind...",
       image:
-        "https://bhagawatidiagnostic.com/wp-content/uploads/2025/08/OIP.webp",
+        "/images/OIP.webp",
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ const BlogArticleGrid = () => {
       excerpt:
         "Accurate Diagnostics Save Lives. They Help Doctors Find The Right Treatment, Make Recovery Faster, And Improve Health. A Test Result Is Not Just A Number—It...",
       image:
-        "https://bhagawatidiagnostic.com/wp-content/uploads/2025/06/lab-accuracy-768x576.jpg",
+        "/images/lab-accuracy-768x576.jpg",
     },
   ];
 

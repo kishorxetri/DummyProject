@@ -7,27 +7,27 @@ const ClientLogos = () => {
   const logos = [
     {
       id: 1,
-      url: "https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/client3.png",
+      url: "/images/client3.png",
       alt: "Central Hospital",
     },
     {
       id: 2,
-      url: "https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/client2.png",
+      url: "/images/client2.png",
       alt: "Panacea Clinic",
     },
     {
       id: 3,
-      url: "https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/client1.png",
+      url: "/images/client1.png",
       alt: "Cardiac Science",
     },
     {
       id: 4,
-      url: "https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/client5.png",
+      url: "/images/client5.png",
       alt: "Pharmacy",
     },
     {
       id: 5,
-      url: "https://bhagawatidiagnostic.com/wp-content/themes/bhagwati/img/client4.png",
+      url: "/images/client4.png",
       alt: "Healthcare",
     },
   ];
