@@ -61,8 +61,8 @@ const ChairmanMessage = () => {
 
               {/* Decorative Quote Mark */}
               <div className="relative mb-8">
-                <div className="absolute -left-4 -top-2 text-[80px] md:text-[100px] text-[#be127e] opacity-20 font-serif leading-none">"</div>
-                <h2 className="relative text-[30px] md:text-[36px] font-bold text-[#003b46] leading-tight tracking-tight">
+                <div className="absolute -left-8 md:-left-12 -top-4 text-[80px] md:text-[100px] text-[#be127e] opacity-20 font-serif leading-none">"</div>
+                <h2 className="relative text-[30px] md:text-[36px] font-bold text-[#003b46] leading-tight tracking-tight pl-2">
                   Bhagawati Diagnostic Center – Trusted, Accurate &amp; Affordable Diagnostic Services in Nepal
                 </h2>
               </div>
