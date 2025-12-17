@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight, FaWhatsapp, FaArrowRight, FaPlus, FaClipboardList, FaClock } from "react-icons/fa";
 import "@fontsource/poppins";
 import "@fontsource/poppins/600.css";
@@ -131,13 +132,16 @@ const Hero = () => {
                     )}
 
                     {slide.id === 3 && (
-                      <button className="relative bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-md font-bold uppercase text-xs sm:text-sm tracking-wider shadow-lg overflow-hidden group">
+                      <Link
+                        to="/about/chairman-message"
+                        className="relative bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-md font-bold uppercase text-xs sm:text-sm tracking-wider shadow-lg overflow-hidden group inline-block"
+                      >
                         <span className="absolute inset-0 w-full h-full flex opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                           <span className="w-1/2 h-full bg-[#3498db] transition-transform duration-500 ease-in-out group-hover:-translate-x-full"></span>
                           <span className="w-1/2 h-full bg-[#3498db] transition-transform duration-500 ease-in-out group-hover:translate-x-full"></span>
                         </span>
                         <span className="relative z-10">About Us</span>
-                      </button>
+                      </Link>
                     )}
                   </div>
                 </div>
