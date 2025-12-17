@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Specialists = () => {
+  const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const specialists = [
@@ -97,7 +99,10 @@ const Specialists = () => {
                 <div className="flex gap-3 justify-center">
 
                   {/* Button group added here */}
-                  <button className="relative bg-gradient-to-r from-gray-900 to-black text-white px-5 py-2.5 rounded-lg text-[13px] font-semibold shadow-lg hover:shadow-xl overflow-hidden group/btn transition-shadow duration-300">
+                  <button
+                    onClick={() => navigate('/specialist', { state: { specialist } })}
+                    className="relative bg-gradient-to-r from-gray-900 to-black text-white px-5 py-2.5 rounded-lg text-[13px] font-semibold shadow-lg hover:shadow-xl overflow-hidden group/btn transition-shadow duration-300"
+                  >
                     <span className="absolute inset-0 w-full h-full flex">
                       <span className="w-1/2 h-full bg-gradient-to-r from-[#be127e] to-[#d0148a] transition-transform duration-500 ease-in-out group-hover/btn:-translate-x-full"></span>
                       <span className="w-1/2 h-full bg-gradient-to-r from-[#be127e] to-[#d0148a] transition-transform duration-500 ease-in-out group-hover/btn:translate-x-full"></span>

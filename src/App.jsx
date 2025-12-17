@@ -6,6 +6,7 @@ import ContactUs from "./pages/ContactUs.jsx";
 import About from "./pages/About.jsx";
 import Doctors from "./pages/Doctors.jsx";
 import FAQ from "./pages/FAQ.jsx";
+import Ourspecalist from "./pages/Ourspecalist.jsx";
 
 // Specialists
 import Cardiologist from "./pages/specialists/Cardiologist.jsx";
@@ -32,6 +33,7 @@ function App() {
       <Route path="/about/chairman-message" element={<ChairmanMessage />} />
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/contact" element={<ContactUs />} />
+      <Route path="/specialist" element={<Ourspecalist />} />
 
       {/* Specialists */}
       <Route path="/specialists/cardiologist" element={<Cardiologist />} />

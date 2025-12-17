@@ -61,6 +61,7 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [slides.length]);
 
+
   return (
     <div className="relative w-full overflow-hidden font-['Poppins'] ">
 
