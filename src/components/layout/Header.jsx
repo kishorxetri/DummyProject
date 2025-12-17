@@ -75,30 +75,30 @@ const Header = () => {
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="w-full bg-white text-[#003b46] text-sm py-2">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
+      <div className="w-full bg-white text-[#003b46] py-3 font-['Poppins']">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-0">
 
-          <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-2">
-              <FaPhoneAlt />
-              <span>9860953155</span>
+          <div className="flex items-center gap-8">
+            <div className="flex items-center gap-3">
+              <FaPhoneAlt className="text-[#be127e] text-[14px]" />
+              <span className="text-[14px] font-medium">9860953155</span>
             </div>
 
-            <div className="flex items-center space-x-2">
-              <FaEnvelope />
-              <span>bhagwoti999@gmail.com</span>
+            <div className="flex items-center gap-3">
+              <FaEnvelope className="text-[#be127e] text-[14px]" />
+              <span className="text-[14px] font-medium">bhagwoti999@gmail.com</span>
             </div>
           </div>
 
-          <div className="hidden md:flex items-center space-x-6">
-            <Link to="/about" className="hover:text-[#be127e] transition">About</Link>
-            <Link to="/doctors" className="hover:text-[#be127e] transition">Doctors</Link>
-            <Link to="/contact" className="hover:text-[#be127e] transition">Contact</Link>
-            <Link to="/faq" className="hover:text-[#be127e] transition">FAQ</Link>
+          <div className="hidden md:flex items-center gap-6">
+            <Link to="/about" className="text-[14px] font-medium hover:text-[#be127e] transition-colors duration-300">About</Link>
+            <Link to="/doctors" className="text-[14px] font-medium hover:text-[#be127e] transition-colors duration-300">Doctors</Link>
+            <Link to="/contact" className="text-[14px] font-medium hover:text-[#be127e] transition-colors duration-300">Contact</Link>
+            <Link to="/faq" className="text-[14px] font-medium hover:text-[#be127e] transition-colors duration-300">FAQ</Link>
 
             <div className="relative">
-              <FaShoppingCart className="text-lg" />
-              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-1">
+              <FaShoppingCart className="text-black text-[16px] cursor-pointer hover:text-gray-600 transition-colors duration-300" />
+              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center font-semibold">
                 0
               </span>
             </div>
