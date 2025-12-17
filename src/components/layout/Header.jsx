@@ -50,8 +50,16 @@ const Header = () => {
   ];
 
   // Function to check if a nav item is active
-  const isActive = (path) => {
-    return location.pathname === path;
+  const isActive = (item) => {
+    // Check if the current path matches the item's path
+    if (location.pathname === item.path) {
+      return true;
+    }
+    // Check if any dropdown item is active
+    if (item.dropdown) {
+      return item.dropdown.some(subItem => location.pathname === subItem.path);
+    }
+    return false;
   };
 
   const hoverUnderlineClass = "relative group";
@@ -115,7 +123,7 @@ const Header = () => {
 
           <ul className="hidden md:flex items-center space-x-8 text-[17px] font-medium text-[#333]">
             {navItems.map((item, index) => {
-              const active = isActive(item.path);
+              const active = isActive(item);
               return (
                 <li key={index} className={`${hoverUnderlineClass} flex items-center gap-1 cursor-pointer`}>
                   <Link
@@ -155,7 +163,7 @@ const Header = () => {
         <div className="md:hidden bg-white shadow-lg border-t absolute top-[var(--header-height)] left-0 w-full z-50 flex flex-col p-4 space-y-4 max-h-[80vh] overflow-y-auto">
 
           {navItems.map((item, index) => {
-            const active = isActive(item.path);
+            const active = isActive(item);
             return (
               <div key={index} className="flex flex-col">
                 <Link
