@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaPhoneAlt, FaEnvelope, FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
-//import logo from "../../assets/bhagawati.png";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
