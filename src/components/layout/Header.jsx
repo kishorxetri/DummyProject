@@ -110,7 +110,10 @@ const Header = () => {
       <div className="sticky top-0 z-[100] w-full bg-white shadow-md py-4 h-[89.44px]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
 
-          <Link to="/">
+          <Link
+            to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
             <img src="/images/bhagawati.png" alt="Logo" className="h-12 md:h-16" />
           </Link>
 
