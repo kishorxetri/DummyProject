@@ -59,95 +59,124 @@ const ChairmanMessage = () => {
             {/* Right Side - Content */}
             <div className="lg:col-span-7">
 
-              {/* Main Heading */}
-              <h2 className="text-[30px] md:text-[34px] font-bold text-[#003b46] leading-tight mb-8 tracking-tight">
-                Bhagawati Diagnostic Center – Trusted, Accurate &amp; Affordable Diagnostic Services in Nepal
-              </h2>
+              {/* Decorative Quote Mark */}
+              <div className="relative mb-8">
+                <div className="absolute -left-4 -top-2 text-[80px] md:text-[100px] text-[#be127e] opacity-20 font-serif leading-none">"</div>
+                <h2 className="relative text-[30px] md:text-[36px] font-bold text-[#003b46] leading-tight tracking-tight">
+                  Bhagawati Diagnostic Center – Trusted, Accurate &amp; Affordable Diagnostic Services in Nepal
+                </h2>
+              </div>
 
-              {/* Introduction */}
-              <div className="space-y-5 text-[15px] md:text-[16px] text-gray-600 leading-relaxed mb-10">
-                <p>
-                  Welcome to <span className="font-semibold text-[#003b46]">Bhagawati Diagnostic Center</span>, one of Nepal's most reliable and affordable diagnostic and pathology service providers. We are dedicated to offering <span className="font-semibold text-gray-700">accurate laboratory tests, advanced diagnostic facilities, and world-class patient care</span> under one roof.
+              {/* Introduction with Enhanced Styling */}
+              <div className="space-y-6 text-[15px] md:text-[17px] text-gray-700 leading-[1.8] mb-12">
+                <p className="relative pl-6 border-l-4 border-[#be127e] bg-gradient-to-r from-purple-50/50 to-transparent py-3 pr-4 rounded-r-lg">
+                  Welcome to <span className="font-bold text-[#be127e]">Bhagawati Diagnostic Center</span>, one of Nepal's most reliable and affordable diagnostic and pathology service providers located in Lalitpur. We are dedicated to offering <span className="font-semibold text-[#003b46]">accurate laboratory tests, advanced diagnostic facilities, and world-class patient care</span> under one roof.
                 </p>
 
-                <p>
-                  At Bhagawati Diagnostic Center, we understand the importance of <span className="font-semibold text-gray-700">precise and timely medical diagnosis</span> for effective treatment and long-term patient care. That is why we use <span className="font-semibold text-gray-700">modern laboratory equipment, highly sensitive technologies, and internationally accepted testing standards</span> to ensure accurate results in every report.
+                <p className="leading-[1.8]">
+                  At Bhagawati Diagnostic Center, we understand the importance of <span className="font-semibold text-[#003b46]">precise and timely medical diagnosis</span> for effective treatment and long-term patient care. That is why we use <span className="font-semibold text-[#003b46]">modern laboratory equipment, highly sensitive technologies, and internationally accepted testing standards</span> to ensure accurate results in every report.
                 </p>
               </div>
 
-              {/* Our Expert Diagnostic Team Section */}
-              <div className="mb-10">
-                <h3 className="text-[24px] md:text-[26px] font-bold text-[#003b46] mb-5 tracking-tight">
-                  Our Expert Diagnostic Team
-                </h3>
+              {/* Our Expert Diagnostic Team Section - Enhanced Card */}
+              <div className="mb-12 bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-1 h-8 bg-gradient-to-b from-[#be127e] to-[#d4148a] rounded-full"></div>
+                  <h3 className="text-[24px] md:text-[28px] font-bold text-[#003b46] tracking-tight">
+                    Our Expert Diagnostic Team
+                  </h3>
+                </div>
 
-                <p className="text-[15px] md:text-[16px] text-gray-600 leading-relaxed mb-5">
+                <p className="text-[15px] md:text-[17px] text-gray-600 leading-relaxed mb-6">
                   Our strength lies in our highly qualified team of:
                 </p>
 
-                <ul className="space-y-3 mb-5">
-                  <li className="flex items-start gap-3 text-[15px] md:text-[16px] text-gray-600 hover:text-gray-800 transition-colors duration-200">
-                    <span className="text-[#be127e] font-bold mt-1 text-lg">•</span>
-                    <span><span className="font-semibold text-gray-700">Pathologists</span></span>
-                  </li>
-                  <li className="flex items-start gap-3 text-[15px] md:text-[16px] text-gray-600 hover:text-gray-800 transition-colors duration-200">
-                    <span className="text-[#be127e] font-bold mt-1 text-lg">•</span>
-                    <span><span className="font-semibold text-gray-700">Biochemists</span></span>
-                  </li>
-                  <li className="flex items-start gap-3 text-[15px] md:text-[16px] text-gray-600 hover:text-gray-800 transition-colors duration-200">
-                    <span className="text-[#be127e] font-bold mt-1 text-lg">•</span>
-                    <span><span className="font-semibold text-gray-700">Microbiologists</span></span>
-                  </li>
-                  <li className="flex items-start gap-3 text-[15px] md:text-[16px] text-gray-600 hover:text-gray-800 transition-colors duration-200">
-                    <span className="text-[#be127e] font-bold mt-1 text-lg">•</span>
-                    <span><span className="font-semibold text-gray-700">Experienced laboratory technologists</span></span>
-                  </li>
-                </ul>
+                {/* Enhanced Team List with Icons */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                  <div className="flex items-center gap-4 p-4 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl hover:shadow-md transition-all duration-300 group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#be127e] to-[#d4148a] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      P
+                    </div>
+                    <span className="font-semibold text-[#003b46] text-[16px]">Pathologists</span>
+                  </div>
 
-                <p className="text-[15px] md:text-[16px] text-gray-600 leading-relaxed">
-                  Each member of our diagnostic team is committed to delivering <span className="font-semibold text-gray-700">reliable, fast, and accurate test results</span> with complete confidentiality.
-                </p>
+                  <div className="flex items-center gap-4 p-4 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl hover:shadow-md transition-all duration-300 group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#be127e] to-[#d4148a] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      B
+                    </div>
+                    <span className="font-semibold text-[#003b46] text-[16px]">Biochemists</span>
+                  </div>
+
+                  <div className="flex items-center gap-4 p-4 bg-gradient-to-br from-pink-50 to-purple-50 rounded-xl hover:shadow-md transition-all duration-300 group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#be127e] to-[#d4148a] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      M
+                    </div>
+                    <span className="font-semibold text-[#003b46] text-[16px]">Microbiologists</span>
+                  </div>
+
+                  <div className="flex items-center gap-4 p-4 bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl hover:shadow-md transition-all duration-300 group">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#be127e] to-[#d4148a] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      L
+                    </div>
+                    <span className="font-semibold text-[#003b46] text-[16px]">Lab Technologists</span>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-[#be127e]/5 to-transparent p-4 rounded-lg border-l-4 border-[#be127e]">
+                  <p className="text-[15px] md:text-[16px] text-gray-700 leading-relaxed italic">
+                    Each member of our diagnostic team is committed to delivering <span className="font-bold text-[#be127e] not-italic">reliable, fast, and accurate test results</span> with complete confidentiality.
+                  </p>
+                </div>
               </div>
 
-              {/* Why Choose Us Section */}
-              <div className="bg-gradient-to-br from-gray-50 via-white to-gray-50 rounded-2xl p-7 md:p-9 shadow-xl hover:shadow-2xl border border-gray-200 mb-10 transition-all duration-500 hover:scale-[1.01]">
-                <h3 className="text-[24px] md:text-[26px] font-bold text-[#003b46] mb-6 tracking-tight">
-                  Why Choose Bhagawati Diagnostic Center?
-                </h3>
+              {/* Why Choose Us Section - Consistent Design */}
+              <div className="mb-12">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-1 h-8 bg-gradient-to-b from-[#be127e] to-[#d4148a] rounded-full"></div>
+                  <h3 className="text-[24px] md:text-[28px] font-bold text-[#003b46] tracking-tight">
+                    Why Choose Bhagawati Diagnostic Center?
+                  </h3>
+                </div>
 
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-4 text-[15px] md:text-[16px] text-gray-600 hover:text-gray-800 transition-colors duration-200">
-                    <span className="text-[#be127e] font-bold text-xl mt-0.5 min-w-[20px]">✓</span>
-                    <span><span className="font-semibold text-gray-700">Affordable Pricing</span> – Quality diagnostics at budget-friendly rates</span>
-                  </li>
-                  <li className="flex items-start gap-4 text-[15px] md:text-[16px] text-gray-600 hover:text-gray-800 transition-colors duration-200">
-                    <span className="text-[#be127e] font-bold text-xl mt-0.5 min-w-[20px]">✓</span>
-                    <span><span className="font-semibold text-gray-700">Advanced Technology</span> – Latest diagnostic equipment for precise results</span>
-                  </li>
-                  <li className="flex items-start gap-4 text-[15px] md:text-[16px] text-gray-600 hover:text-gray-800 transition-colors duration-200">
-                    <span className="text-[#be127e] font-bold text-xl mt-0.5 min-w-[20px]">✓</span>
-                    <span><span className="font-semibold text-gray-700">Quick Turnaround Time</span> – Fast and efficient report delivery</span>
-                  </li>
-                  <li className="flex items-start gap-4 text-[15px] md:text-[16px] text-gray-600 hover:text-gray-800 transition-colors duration-200">
-                    <span className="text-[#be127e] font-bold text-xl mt-0.5 min-w-[20px]">✓</span>
-                    <span><span className="font-semibold text-gray-700">Experienced Professionals</span> – Highly trained medical experts</span>
-                  </li>
-                  <li className="flex items-start gap-4 text-[15px] md:text-[16px] text-gray-600 hover:text-gray-800 transition-colors duration-200">
-                    <span className="text-[#be127e] font-bold text-xl mt-0.5 min-w-[20px]">✓</span>
-                    <span><span className="font-semibold text-gray-700">Patient-Centric Approach</span> – Comfort and care at every step</span>
-                  </li>
-                </ul>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  {[
+                    { title: "Affordable Pricing", desc: "Quality diagnostics at budget-friendly rates", icon: "💰", gradient: "from-purple-50 to-pink-50" },
+                    { title: "Advanced Technology", desc: "Latest diagnostic equipment for precise results", icon: "🔬", gradient: "from-blue-50 to-purple-50" },
+                    { title: "Quick Turnaround Time", desc: "Fast and efficient report delivery", icon: "⚡", gradient: "from-pink-50 to-purple-50" },
+                    { title: "Experienced Professionals", desc: "Highly trained medical experts", icon: "👨‍⚕️", gradient: "from-purple-50 to-blue-50" },
+                    { title: "Patient-Centric Approach", desc: "Comfort and care at every step", icon: "❤️", gradient: "from-purple-50 to-pink-50" }
+                  ].map((item, index) => (
+                    <div key={index} className={`flex items-start gap-5 p-6 bg-gradient-to-br ${item.gradient} rounded-xl shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-[#be127e]/30`}>
+                      <div className="text-4xl group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
+                      <div className="flex-1">
+                        <h4 className="font-bold text-[#003b46] text-[17px] mb-2">{item.title}</h4>
+                        <p className="text-gray-600 text-[15px] leading-relaxed">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              {/* Closing Message */}
-              <div className="text-[15px] md:text-[16px] text-gray-600 leading-relaxed space-y-5 bg-gradient-to-r from-blue-50 to-purple-50 p-6 md:p-7 rounded-xl border-l-4 border-[#be127e]">
-                <p>
-                  Whether you need routine blood tests, advanced pathology services, or comprehensive health checkups, <span className="font-semibold text-[#003b46]">Bhagawati Diagnostic Center</span> is here to serve you with excellence.
-                </p>
+              {/* Closing Message - Highlighted Quote Box */}
+              <div className="relative bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 rounded-2xl p-8 md:p-10 shadow-xl border-2 border-[#be127e]/20 overflow-hidden">
+                {/* Decorative Corner Element */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#be127e]/10 to-transparent rounded-bl-full"></div>
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-[#be127e]/10 to-transparent rounded-tr-full"></div>
 
-                <p className="font-bold text-[#003b46] text-[17px] md:text-[18px] tracking-tight">
-                  Your health is our priority. Trust us for accurate diagnostics and compassionate care.
-                </p>
+                <div className="relative z-10 space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="text-5xl text-[#be127e] opacity-40 font-serif leading-none">"</div>
+                    <p className="text-[16px] md:text-[18px] text-gray-700 leading-[1.8] pt-2">
+                      Whether you need routine blood tests, advanced pathology services, or comprehensive health checkups, <span className="font-bold text-[#be127e]">Bhagawati Diagnostic Center</span> is here to serve you with excellence.
+                    </p>
+                  </div>
+
+                  <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg border-l-4 border-[#be127e]">
+                    <p className="font-bold text-[#003b46] text-[18px] md:text-[20px] tracking-tight text-center">
+                      Your health is our priority. Trust us for accurate diagnostics and compassionate care.
+                    </p>
+                  </div>
+                </div>
               </div>
 
             </div>

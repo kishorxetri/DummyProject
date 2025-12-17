@@ -29,7 +29,7 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/doctors" element={<Doctors />} />
       <Route path="/faq" element={<FAQ />} />
-      <Route path="/chairman-message" element={<ChairmanMessage />} />
+      <Route path="/about/chairman-message" element={<ChairmanMessage />} />
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/contact" element={<ContactUs />} />
 

@@ -15,7 +15,7 @@ const Header = () => {
       name: "About Us",
       path: "#",
       dropdown: [
-        { name: "Message from Our Chairman", path: "/chairman-message" },
+        { name: "Message from Our Chairman", path: "/about/chairman-message" },
       ],
     },
     {
