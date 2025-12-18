@@ -47,7 +47,7 @@ const FacilitiesGallery = () => {
   };
 
   return (
-    <section className="pt-[15px] pb-0 bg-gray-50 font-['Poppins'] overflow-hidden">
+    <section className="py-12 md:py-16 bg-gray-50 font-['Poppins'] overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Carousel Container */}

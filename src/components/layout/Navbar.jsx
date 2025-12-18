@@ -10,7 +10,6 @@ const Navbar = () => {
 
   // Navigation Data
   const navItems = [
-    { name: "Home", path: "/" },
     {
       name: "About Us",
       path: "#",
@@ -97,15 +96,15 @@ const Navbar = () => {
   return (
     <>
       {/* Main Navbar */}
-      <nav className="sticky top-0 z-[100] w-full bg-white shadow-md py-3 md:py-4 transition-all duration-300">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[60px] md:h-[70px]">
+      <nav className="sticky top-0 z-[100] w-full bg-white shadow-md py-2 md:py-3 transition-all duration-300">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[55px] md:h-[65px]">
 
           <Link
             to="/"
             className="flex-shrink-0"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <img src="/images/bhagawati.png" alt="Logo" className="h-10 md:h-14 lg:h-16 w-auto transition-all" />
+            <img src="/images/bhagawati.png" alt="Logo" className="h-9 md:h-12 lg:h-14 w-auto transition-all" />
           </Link>
 
           {/* Desktop Nav */}

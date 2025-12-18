@@ -3,7 +3,7 @@ import { FaAmbulance, FaStethoscope, FaHeartbeat, FaClinicMedical } from "react-
 
 const ReadyToHelp = () => {
   return (
-    <div className="py-12 md:py-16 bg-white font-['Poppins']">
+    <div className="pt-8 md:pt-12 pb-12 md:pb-16 bg-white font-['Poppins']">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header Section */}

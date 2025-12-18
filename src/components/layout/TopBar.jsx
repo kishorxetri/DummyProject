@@ -4,8 +4,8 @@ import { FaPhoneAlt, FaEnvelope, FaShoppingCart } from "react-icons/fa";
 
 const TopBar = () => {
   return (
-    <div className="w-full bg-white text-[#003b46] py-2 md:py-3 font-['Poppins'] border-b border-gray-100">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
+    <div className="w-full bg-white text-[#003b46] py-3 md:py-4 font-['Poppins'] border-b border-gray-100">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
 
         <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
           <div className="flex items-center gap-2 md:gap-3">

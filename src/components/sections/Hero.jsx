@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight, FaWhatsapp, FaArrowRight, FaPlus, FaClipboardList, FaClock } from "react-icons/fa";
 import "@fontsource/poppins";
@@ -45,9 +45,9 @@ const Hero = () => {
     }
   ];
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  };
+  }, [slides.length]);
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -56,17 +56,17 @@ const Hero = () => {
   useEffect(() => {
     setIsLoaded(true);
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 6000); // Wait 6 seconds (enough time to read)
+      nextSlide();
+    }, 6000);
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, [nextSlide]);
 
 
   return (
-    <div className="relative w-full overflow-hidden font-['Poppins'] ">
+    <section className="relative w-full overflow-hidden font-['Poppins']">
 
       {/* Slider Section */}
-      <div className="relative h-[550px] md:h-[650px] flex items-center">
+      <div className="relative h-[530px] md:h-[630px] flex items-center">
         {slides.map((slide, index) => {
           const isActive = index === currentSlide && isLoaded;
           return (
@@ -78,31 +78,23 @@ const Hero = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent"></div>
 
-              {/* 
-                  Container Updates:
-                  - md:px-[150px]: Symmetrical padding (150px left AND right).
-                  - px-4: Mobile padding retained.
-              */}
               <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center relative z-20">
+                <div className={`w-full md:w-[60%] lg:w-[50%] -mt-6 sm:-mt-8 md:-mt-12 lg:-mt-16 transition-all duration-700`}>
 
-                <div className={`w-full md:w-[45%] -mt-16`}>
-
-                  {/* Title: Appears after background transition (1000ms) */}
-                  <h1 className={`text-[24px] sm:text-[28px] md:text-[38px] font-bold text-[#003b46] leading-tight transition-all duration-1000 ease-out delay-1000 transform ${isActive ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
+                  {/* Title */}
+                  <h1 className={`text-[24px] sm:text-[28px] md:text-[38px] font-bold text-[#003b46] leading-tight transition-all duration-1000 ease-out delay-500 transform ${isActive ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                     }`}>
                     {slide.title}
                   </h1>
-
-                  {/* Description: Appears slightly after title */}
-                  <p className={`text-[#444] text-[14px] sm:text-[15px] md:text-[16px] font-medium leading-relaxed mt-4 transition-all duration-1000 ease-out delay-[1200ms] transform ${isActive ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                  {/* Description */}
+                  <p className={`text-[#444] text-[14px] sm:text-[15px] md:text-[16px] font-medium leading-relaxed mt-4 transition-all duration-1000 ease-out delay-[700ms] transform ${isActive ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
                     }`}>
                     {slide.description}
                   </p>
 
-                  {/* Buttons: Appear last */}
-                  <div className={`flex flex-wrap gap-4 mt-8 transition-all duration-1000 ease-out delay-[1400ms] transform ${isActive ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                  {/* Buttons */}
+                  <div className={`flex flex-wrap gap-4 mt-8 transition-all duration-1000 ease-out delay-[900ms] transform ${isActive ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
                     }`}>
-                    {/* Get Appointment Button - Same for all slides */}
                     <button className="relative bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-md font-bold uppercase text-xs sm:text-sm tracking-wider shadow-lg overflow-hidden group">
                       <span className="absolute inset-0 w-full h-full flex">
                         <span className="w-1/2 h-full bg-[#be127e] transition-transform duration-500 ease-in-out group-hover:-translate-x-full"></span>
@@ -111,7 +103,6 @@ const Hero = () => {
                       <span className="relative z-10">Get Appointment</span>
                     </button>
 
-                    {/* Second Button - Changes based on slide */}
                     {slide.id === 1 && (
                       <button className="relative bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-md font-bold uppercase text-xs sm:text-sm tracking-wider shadow-lg overflow-hidden group">
                         <span className="absolute inset-0 w-full h-full flex opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -146,7 +137,6 @@ const Hero = () => {
                     )}
                   </div>
                 </div>
-
               </div>
             </div>
           );
@@ -166,77 +156,89 @@ const Hero = () => {
           <FaChevronRight size={20} />
         </button>
       </div>
+
+
       {/* Floating Whatsapp Button */}
-      <div className="fixed bottom-8 right-8 z-50">
-        <a href="#" className="flex items-center justify-center w-16 h-16 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition text-white text-4xl animate-bounce-slow">
+      <div className="fixed bottom-6 right-6 sm:bottom-10 sm:right-10 z-[999]">
+        <a
+          href="https://wa.me/9860953155"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-[#25D366] rounded-full shadow-[0_8px_30px_rgb(37,211,102,0.4)] hover:bg-[#128C7E] transition-all hover:scale-110 active:scale-90 text-white text-3xl sm:text-4xl"
+        >
           <FaWhatsapp />
         </a>
       </div>
-      {/* Cards Section - Overlapping with slider */}
+
+      {/* Cards Section */}
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-40">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 -mt-[100px] sm:-mt-[130px] md:-mt-[170px] px-4 sm:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-6 -mt-24 sm:-mt-28 md:-mt-36 lg:-mt-44">
 
           {/* Card 1 */}
-          <div className="bg-[#8e0c60] text-white p-5 sm:p-6 md:p-[30px] w-full md:w-[330px] min-h-[280px] md:h-[308px] hover:bg-[#720a4d] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,18,126,0.5)] transition duration-300 relative overflow-hidden group flex flex-col justify-between rounded-lg shadow-xl">
+          <div className="bg-[#8e0c60] text-white p-6 sm:p-8 lg:p-10 hover:bg-[#720a4d] hover:-translate-y-3 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between rounded-xl shadow-2xl min-h-[280px]">
             <div className="relative z-10">
-              <div className="text-[16px] font-semibold mb-2 md:mb-3 opacity-90 uppercase tracking-wide">24/7 Support</div>
-              <h3 className="text-[20px] font-bold mb-3 md:mb-5">Emergency Cases</h3>
-              <p className="text-[16px] opacity-90 mb-4 md:mb-6 leading-relaxed">
+              <div className="text-xs sm:text-sm font-semibold mb-3 opacity-80 uppercase tracking-[2px]">24/7 Support</div>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">Emergency Cases</h3>
+              <p className="text-sm sm:text-base opacity-90 leading-relaxed mb-6">
                 If you need urgent medical diagnostics, we are just a call away. We provide emergency lab services at Tikathali, Lalitpur.
               </p>
             </div>
             <div className="relative z-10">
-              <a href="#" className="flex items-center text-xs md:text-sm font-bold tracking-wider uppercase hover:underline">
-                Learn More <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-              </a>
+              <Link to="/contact" className="inline-flex items-center text-sm font-bold tracking-widest uppercase hover:gap-3 transition-all duration-300 underline-offset-8 hover:underline">
+                Call Now <FaArrowRight size={14} className="ml-2 transition-transform group-hover:translate-x-1" />
+              </Link>
             </div>
-            {/* Background Icon */}
-            <FaPlus className="absolute bottom-[-10px] right-[-30px] text-[8rem] md:text-[10rem] text-white opacity-10 transform group-hover:scale-110 transition duration-500 rotate-12" />
+            <FaPlus className="absolute -bottom-6 -right-8 text-[120px] sm:text-[160px] text-white/10 rotate-12 group-hover:scale-110 transition-transform duration-500" />
           </div>
 
           {/* Card 2 */}
-          <div className="bg-[#be127e] text-white p-5 sm:p-6 md:p-[30px] w-full md:w-[330px] min-h-[280px] md:h-[308px] hover:bg-[#9d0f68] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,18,126,0.5)] transition duration-300 relative overflow-hidden group flex flex-col justify-between rounded-lg shadow-xl">
+          <div className="bg-[#be127e] text-white p-6 sm:p-8 lg:p-10 hover:bg-[#a6106e] hover:-translate-y-3 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between rounded-xl shadow-2xl min-h-[280px]">
             <div className="relative z-10">
-              <div className="text-[16px] font-semibold mb-2 md:mb-3 opacity-90 uppercase tracking-wide">Expert Team</div>
-              <h3 className="text-[20px] font-bold mb-3 md:mb-5">Doctors Timetable</h3>
-              <p className="text-[16px] opacity-90 mb-4 md:mb-6 leading-relaxed">
+              <div className="text-xs sm:text-sm font-semibold mb-3 opacity-80 uppercase tracking-[2px]">Expert Team</div>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">Doctors Timetable</h3>
+              <p className="text-sm sm:text-base opacity-90 leading-relaxed mb-6">
                 Check available time slots for our diagnostic specialists. Our team is always ready to assist you with accuracy and care.
               </p>
             </div>
             <div className="relative z-10">
-              <a href="#" className="flex items-center text-xs md:text-sm font-bold tracking-wider uppercase hover:underline">
-                Learn More <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-              </a>
+              <Link to="/doctors" className="inline-flex items-center text-sm font-bold tracking-widest uppercase hover:gap-3 transition-all duration-300 underline-offset-8 hover:underline">
+                View Schedule <FaArrowRight size={14} className="ml-2 transition-transform group-hover:translate-x-1" />
+              </Link>
             </div>
-            {/* Background Icon */}
-            <FaClipboardList className="absolute bottom-[-10px] right-[-30px] text-[8rem] md:text-[10rem] text-white opacity-10 transform group-hover:scale-110 transition duration-500 rotate-12" />
+            <FaClipboardList className="absolute -bottom-6 -right-8 text-[120px] sm:text-[160px] text-white/10 rotate-12 group-hover:scale-110 transition-transform duration-500" />
           </div>
 
           {/* Card 3 */}
-          <div className="bg-[#8e0c60] text-white p-5 sm:p-6 md:p-[30px] w-full md:w-[330px] min-h-[280px] md:h-[308px] hover:bg-[#720a4d] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,18,126,0.5)] transition duration-300 relative overflow-hidden group flex flex-col justify-between rounded-lg shadow-xl">
+          <div className="bg-[#8e0c60] text-white p-6 sm:p-8 lg:p-10 hover:bg-[#720a4d] hover:-translate-y-3 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between rounded-xl shadow-2xl min-h-[280px] md:col-span-2 lg:col-span-1">
             <div className="relative z-10">
-              <div className="text-[16px] font-semibold mb-2 md:mb-3 opacity-90 uppercase tracking-wide">Visit Us</div>
-              <h3 className="text-[20px] font-bold mb-3 md:mb-5">Opening Hours</h3>
-              <p className="text-[16px] opacity-90 mb-4 md:mb-6 leading-relaxed">
-                Sunday - Saturday 6:00 AM - 9:00 PM <br /><br />
-                Always Open - 7 Days a Week, No Holidays
-              </p>
+              <div className="text-xs sm:text-sm font-semibold mb-3 opacity-80 uppercase tracking-[2px]">Visit Us</div>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">Opening Hours</h3>
+              <div className="space-y-2 text-sm sm:text-base opacity-95">
+                <div className="flex justify-between border-b border-white/10 pb-2">
+                  <span>Sunday - Friday:</span>
+                  <span className="font-semibold">6:00 AM - 9:00 PM</span>
+                </div>
+                <div className="flex justify-between pt-1">
+                  <span>Saturday:</span>
+                  <span className="font-semibold">6:00 AM - 5:00 PM</span>
+                </div>
+                <p className="mt-4 text-white/70 italic text-xs sm:text-sm">Emergency services available 24/7</p>
+              </div>
             </div>
-            <div className="relative z-10">
-              <a href="#" className="flex items-center text-xs md:text-sm font-bold tracking-wider uppercase hover:underline">
-                Learn More <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-              </a>
+            <div className="relative z-10 mt-6 lg:mt-0">
+              <Link to="/contact" className="inline-flex items-center text-sm font-bold tracking-widest uppercase hover:gap-3 transition-all duration-300 underline-offset-8 hover:underline">
+                Get Directions <FaArrowRight size={14} className="ml-2 transition-transform group-hover:translate-x-1" />
+              </Link>
             </div>
-            {/* Background Icon */}
-            <FaClock className="absolute bottom-[-10px] right-[-30px] text-[8rem] md:text-[10rem] text-white opacity-10 transform group-hover:scale-110 transition duration-500 rotate-12" />
+            <FaClock className="absolute -bottom-6 -right-8 text-[120px] sm:text-[160px] text-white/10 rotate-12 group-hover:scale-110 transition-transform duration-500" />
           </div>
 
         </div>
       </div>
 
       {/* Bottom spacing */}
-      <div className="pb-12 md:pb-16"></div>
-    </div>
+      <div className="pb-10 md:pb-14"></div>
+    </section>
   );
 };
 

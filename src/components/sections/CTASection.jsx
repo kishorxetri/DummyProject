@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const CTASection = () => {
   return (
-    <section className="pt-[50px] pb-[15px] bg-[#be127e] font-['Poppins']">
+    <section className="py-12 md:py-16 bg-[#be127e] font-['Poppins']">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
 
         {/* Content Container with responsive padding */}

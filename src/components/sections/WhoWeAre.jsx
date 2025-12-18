@@ -28,7 +28,7 @@ const WhoWeAre = () => {
   };
 
   return (
-    <section className="pt-[15px] pb-12 md:pb-16 bg-white overflow-hidden">
+    <section className="py-12 md:py-16 bg-white overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row gap-12 items-center">
 
@@ -112,7 +112,7 @@ const WhoWeAre = () => {
 
 // Feature Item Helper
 const FeatureItem = ({ text }) => (
-  <div className="flex items-center gap-3 group mb-[35px]">
+  <div className="flex items-center gap-3 group mb-4">
     <div className="w-6 h-6 rounded-full bg-[#be127e] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
       <FaChevronRight className="text-white text-xs" />
     </div>
